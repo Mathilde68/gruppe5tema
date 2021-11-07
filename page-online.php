@@ -12,7 +12,7 @@ get_header();
 
 	<section id="section" class="content-area">
 
-		<main id="main" class="site-main">
+	<main id="main" class="site-main">
 			<section id="oversigt"></section>
 		</main><!-- #main -->
 		
@@ -24,14 +24,16 @@ get_header();
         </article>
     </template>
 
+		
 <script>let kurser;
       
-	  //url til restdb 
-	  const url = "https://xn--mflingo-q1a.dk/kea/ungdomsbyen/wp-json/wp/v2/kursus?per_page=100";
-
-	 //const for destinationen af indholdet og templaten
-	  const destination = document.querySelector("#oversigt");
+	  //url til wp restapi db - læg mærke til den her kun indhenter data med kategori 7 (numreringen på til undervisere og ledere kategorien)
+	  const url = "https://xn--mflingo-q1a.dk/kea/ungdomsbyen/wp-json/wp/v2/kursus?categories=7";
+	 
+ 	//const for destinationen af indholdet og templaten
+			 const destination = document.querySelector("#oversigt");
             let template = document.querySelector("template");
+
 
 	  // asynkron function som afventer og indhenter json data fra restdb
 	  async function hentData() {
@@ -46,18 +48,16 @@ get_header();
 		  kurser.forEach(kursus => {
                
         
-                    const klon = template.cloneNode(true).content;
+			   const klon = template.cloneNode(true).content;
 
-                    klon.querySelector(".navn").textContent = kursus.title.rendered;
-                    klon.querySelector("img").src = kursus.billede.guid;
-                    klon.querySelector(".beskrivelse").textContent = kursus.kort_beskrivelse;
-
-              
-                
+			   klon.querySelector(".navn").textContent = kursus.title.rendered;
+			   klon.querySelector("img").src = kursus.billede.guid;
+			   klon.querySelector(".beskrivelse").textContent = kursus.kort_beskrivelse;
+		   
 
 
-                    destination.appendChild(klon);
-				});
+			   destination.appendChild(klon);
+		   });
 	  }
 
 	  hentData();

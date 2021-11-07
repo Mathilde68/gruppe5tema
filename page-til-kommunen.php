@@ -30,6 +30,9 @@ get_header();
 	  //url til wp restapi db - læg mærke til den her kunindhenter data med kategori 8 (numreringen på til kommunen kategorien)
 	  const url = "https://xn--mflingo-q1a.dk/kea/ungdomsbyen/wp-json/wp/v2/kursus?categories=8";
 	 
+	   //const for destinationen af indholdet og templaten
+ 			const destination = document.querySelector("#oversigt");
+            let template = document.querySelector("template");
 
 	  // asynkron function som afventer og indhenter json data fra restdb
 	  async function hentData() {
@@ -50,7 +53,6 @@ get_header();
 			   klon.querySelector("img").src = kursus.billede.guid;
 			   klon.querySelector(".beskrivelse").textContent = kursus.kort_beskrivelse;
 
-			   klon.querySelector(".kurset").addEventListener("click", () => visDetaljer(kursus));
 		   
 
 
