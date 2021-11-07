@@ -27,8 +27,8 @@ get_header();
 		
 <script>let kurser;
       
-	  //url til wp restapi db - læg mærke til den her kun indhenter data med kategori 7 (numreringen på til undervisere og ledere kategorien)
-	  const url = "https://xn--mflingo-q1a.dk/kea/ungdomsbyen/wp-json/wp/v2/kursus?categories=7";
+	  //url til wp restapi db - læg mærke til den her kun indhenter data med kategori 5 (numreringen på online kategorien)
+	  const url = "https://xn--mflingo-q1a.dk/kea/ungdomsbyen/wp-json/wp/v2/kursus?categories=5";
 	 
  	//const for destinationen af indholdet og templaten
 			 const destination = document.querySelector("#oversigt");
