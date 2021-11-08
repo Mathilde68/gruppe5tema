@@ -61,21 +61,19 @@ function filtrerKurser (){
 	visKurser();
 }
 
- 	//const for destinationen af indholdet og templaten
-			 const destination = document.querySelector("#oversigt");
-            let template = document.querySelector("template");
-
 
 	  // asynkron function som afventer og indhenter json data fra restdb
 	  async function hentData() {
 		  const jsonData = await fetch(url);
 		  kurser = await jsonData.json();
-		  console.log("kurser" kurser);
 		  visKurser();
 	  }
 
 	  function visKurser(){
 		  console.log(kurser);
+		   	//const for destinationen af indholdet og templaten
+			   const destination = document.querySelector("#oversigt");
+            let template = document.querySelector("template").content;
           destination.textContent = "";
 		  kurser.forEach(kursus => {
 			  if(filter == kursus.tema || filter == "alle"){ 
@@ -87,8 +85,9 @@ function filtrerKurser (){
 
 				klon.querySelector(".seMere").addEventListener("click", () => location.href=kursus.link);
 			   destination.appendChild(klon);
-		   });
-	  }
+		   }
+		});
+	  
 	}
 	  hentData();
 
