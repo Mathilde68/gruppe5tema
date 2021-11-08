@@ -17,22 +17,22 @@ get_header();
 	<section id="intro">
 	<div class="introboks"><p class="introtekst">Ungdomsbyens kurser til ungdomsuddannelser understøtter uddannelsernes fag. Se forneden vores udbudte kurser med fokus på at styrke elevernes globale udsyn, demokratiske forståelse, retorik, økonomiforståelse og konflikthåndteringsevner.</p>
 		</div>
+		<h2>Vælg imellem vores temaer</h2>
 		<div class="filter_section">
-<h2>Vælg imellem vores temaer</h2>
-	<div id="alle">
-                <img src="" alt="">
+	<div id="alle" class="buttonContainer">
+                <img src="https://xn--mflingo-q1a.dk/kea/ungdomsbyen/wp-content/uploads/2021/11/konflikt.png" alt="">
                 <button id="filterknap" class="valgt" data-kategori="alle">Alle kurser</button>
             </div>
-            <div id="tema1">
-                <img src="" alt="">
+            <div id="tema1" class="buttonContainer">
+                <img src="https://xn--mflingo-q1a.dk/kea/ungdomsbyen/wp-content/uploads/2021/11/konflikt.png" alt="">
                 <button id="filterknap" class="" data-kategori="Konflikthåndtering">Konflikthåndtering</button>
             </div>
-            <div id="tema2">
-                <img src="" alt="">
-                <button id="filterknap" class="" data-kategori="FN">Fn's 17 verdensmål</button>
+            <div id="tema2" class="buttonContainer">
+                <img src="https://xn--mflingo-q1a.dk/kea/ungdomsbyen/wp-content/uploads/2021/11/konflikt.png" alt="">
+                <button id="filterknap" class="" data-kategori="Fn verdensmål">Fn's 17 verdensmål</button>
             </div>
-            <div id="tema3">
-                <img src="" alt="">
+            <div id="tema3" class="buttonContainer">
+                <img src="https://xn--mflingo-q1a.dk/kea/ungdomsbyen/wp-content/uploads/2021/11/konflikt.png" alt="">
                 <button id="filterknap" class="" data-kategori="Økonomi">Økonomi</button>
             </div>
 			</div>
