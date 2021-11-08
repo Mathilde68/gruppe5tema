@@ -10,15 +10,6 @@ Version: 1.1.1
   display: none;
 }
 
-h1,
-h2,
-h3,
-h4,
-p,
-li,
-a {
-  font-family: "Courier New", Courier, monospace;
-}
 
 .main-navigation a {
   color: rgba(1, 1, 1, 1) !important; 
