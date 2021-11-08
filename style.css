@@ -38,10 +38,20 @@ label {font-family: courier}
 
 #wpforms-submit-172 {color: white; background-color: black; border-radius: 20px; font-family: courier}
 
-#colophon.widget-area{
+#colophon{
   display: none;
 }
 
 .valgt{
 background-color: coral;
+}
+
+#oversigt {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+  row-gap: 20px;
+  column-gap: 40px;
+  padding: 2rem;
+  margin: auto;
+  max-width: 1400px;
 }

@@ -13,12 +13,15 @@ get_header();
 	<section id="section" class="content-area">
 
 	<main id="main" class="site-main">
-		<div class="introboks"><p class="intro">Ungdomsbyens kurser til ungdomsuddannelser understøtter uddannelsernes fag. Se forneden vores udbudte kurser med fokus på at styrke elevernes globale udsyn, demokratiske forståelse, retorik, økonomiforståelse og konflikthåndteringsevner.</p>
+		
+	<section id="intro">
+	<div class="introboks"><p class="introtekst">Ungdomsbyens kurser til ungdomsuddannelser understøtter uddannelsernes fag. Se forneden vores udbudte kurser med fokus på at styrke elevernes globale udsyn, demokratiske forståelse, retorik, økonomiforståelse og konflikthåndteringsevner.</p>
 		</div>
-	<section class="filter_section">
+		<div class="filter_section">
+<h2>Vælg imellem vores temaer</h2>
 	<div id="alle">
                 <img src="" alt="">
-                <button id="filterknap" class="valgt" data-kategori="alle">Alle temaer</button>
+                <button id="filterknap" class="valgt" data-kategori="alle">Alle kurser</button>
             </div>
             <div id="tema1">
                 <img src="" alt="">
@@ -32,16 +35,18 @@ get_header();
                 <img src="" alt="">
                 <button id="filterknap" class="" data-kategori="Økonomi">Økonomi</button>
             </div>
-
+			</div>
+			<h2 id="overskrift">Kurser til ungdomsuddanelser</h2>
 </section>
+
 			<section id="oversigt">
-				<h2 class="overskrift"> <span id="filterNavn">Kurser</span> til ungdomsuddanelser</h2>
+				
 			</section>
 		</main><!-- #main -->
 		
 		<template>
 		<article class="kurset">
-		<h3 class="navn"></h3>
+		<h4 class="navn"></h4>
             <img src="" alt="">
             <div>
             <p class="kortbeskrivelse"></p>
@@ -54,7 +59,7 @@ get_header();
 		
 <script>let kurser;
 let filter = "alle";
-const aktivFilter = document.querySelector("#filterNavn");
+let nyOverskrift = document.querySelector("#overskrift");
       
 	  //url til wp restapi db - læg mærke til den her kunindhenter data med kategori 4 (numreringen på til ungdomsuddanelser kategorien)
 	  const url = "https://xn--mflingo-q1a.dk/kea/ungdomsbyen/wp-json/wp/v2/kursus?categories=4";
@@ -84,14 +89,15 @@ const aktivFilter = document.querySelector("#filterNavn");
 
 
 		     //ændrer overskriften
-		  aktivFilter=this.textContent;
+		  nyOverskrift.textContent = this.textContent + " til ungdomsuddannelser";
+		 
 
 
 		   //fjerner oog tilføjer valgt class til den rigtige knap
 		   document.querySelector(".valgt").classList.remove("valgt");
             this.classList.add("valgt");
 
-			
+
 		  //kalder function vis kurser efter det nye filter er sat
 		  visKurser();
         }
