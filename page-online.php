@@ -23,6 +23,7 @@ get_header();
             <div>
             <p class="kortbeskrivelse"></p>
             <p class="pris"></p>
+			<button class="seMere">Læs mere</button>
             </div>
         </article>
     </template>
