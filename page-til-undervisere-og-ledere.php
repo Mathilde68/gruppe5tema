@@ -59,8 +59,6 @@ function filtrerKurser (){
     this.classList.add("valgt");
 	visKurser();
 }
-hentData();
-
 
 	  // asynkron function som afventer og indhenter json data fra restdb
 	  async function hentData() {
