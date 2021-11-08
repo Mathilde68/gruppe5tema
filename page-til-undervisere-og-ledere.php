@@ -31,6 +31,15 @@ get_header();
 		</main><!-- #main -->
 		
 		<template>
+
+		<nav>
+        <button data-kategori= "alle" class="valgt">Alle</button>
+        <button data-kategori= "forretter">Forretter</button>
+        <button data-kategori = "hovedretter">Hovedretter</button>
+        <button data-kategori= "desserter">Desserter</button>
+        <button data-kategori= "drikkevarer">Drikkevarer</button>
+    </nav>
+
 		<article class="kurset">
 		<h3 class="navn"></h3>
             <img src="" alt="">
@@ -48,6 +57,22 @@ get_header();
 	  //url til wp restapi db - læg mærke til den her kun indhenter data med kategori 7 (numreringen på til undervisere og ledere kategorien)
 	  const url = "https://xn--mflingo-q1a.dk/kea/ungdomsbyen/wp-json/wp/v2/kursus?categories=7";
 	 
+//filtrer knap, her defineres der filtreringsknapper og laver click event
+
+let kruser;
+let filter = "alle";
+
+const filterKnapper = document.querySelectorAll("button");
+filterKnapper.forEach(knap => knap.addEventListener("click", filtrerKurser));
+hentData();
+
+function filtrerKurser (){
+	filter = this.dataset.kategori;
+	document.querySelector(".")
+}
+
+
+
  	//const for destinationen af indholdet og templaten
 			 const destination = document.querySelector("#oversigt");
             let template = document.querySelector("template");
@@ -62,12 +87,9 @@ get_header();
 
 	  function visKurser(){
 		  console.log(kurser);
-
+          destination.textContent = "";
 		  kurser.forEach(kursus => {
-               
-        
 			   const klon = template.cloneNode(true).content;
-
 			   klon.querySelector(".navn").textContent = kursus.navn;
                 klon.querySelector("img").src = kursus.billede.guid;
                 klon.querySelector(".kortbeskrivelse").textContent = kursus.kort_beskrivelse;
