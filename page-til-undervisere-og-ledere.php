@@ -50,7 +50,7 @@ let kurser;
 //filtrer knap, her defineres der filtreringsknapper og laver click event
 let filter = "alle";
 
-const filterKnapper = document.querySelectorAll(".filter_section button");
+const filterKnapper = document.querySelectorAll(".filter_section");
 filterKnapper.forEach(knap => knap.addEventListener("click", filtrerKurser));
 hentData();
 
