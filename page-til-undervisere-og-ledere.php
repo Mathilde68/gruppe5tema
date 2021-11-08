@@ -16,7 +16,6 @@ get_header();
 
 	<h2>Kursus til undervisere og ledere</h2>
 
-	<section id="oversigt"></section>
 
 	<nav class="filter_section">
         <button data-kategori= "alle" class="valgt">Alle</button>
@@ -24,7 +23,8 @@ get_header();
         <button data-kategori = "tema3">LGBTQ+ og normer</button>
         <button data-kategori= "tema4">Demokrati og medborgerskab</button>
     </nav>
-			
+	<section id="oversigt"></section>		
+
 		</main><!-- #main -->
 		
 		<template>
@@ -76,7 +76,7 @@ function filtrerKurser (){
 			destination.textContent = "";
 		  kurser.forEach(kursus => {
 			  if(filter == kursus.tema || filter == "alle"){ 
-			   const klon = kursusTemplate.cloneNode(true);
+			   const klon = kursusTemplate.cloneNode(true).content;
 			   klon.querySelector(".navn").textContent = kursus.navn;
                 klon.querySelector("img").src = kursus.billede.guid;
                 klon.querySelector(".kortbeskrivelse").textContent = kursus.kort_beskrivelse;
