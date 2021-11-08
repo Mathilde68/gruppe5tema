@@ -13,6 +13,16 @@ get_header();
 	<section id="section" class="content-area">
 
 	<main id="main" class="site-main">
+		<section class="filter_section">
+            <div id="tema1">
+                <img src="" alt="">
+                <button>Uddannelsesvalg</button>
+            </div>
+            <div id="tema2">
+                <img src="" alt="">
+                <button >Demokrati og Medborgerskab</button>
+            </div>
+</section>
 			<section id="oversigt"></section>
 		</main><!-- #main -->
 		
@@ -59,7 +69,7 @@ get_header();
                 klon.querySelector(".pris").textContent = kursus.pris;
 
 		   
-
+				klon.querySelector(".seMere").addEventListener("click", () => location.href=kursus.link);
 
 			   destination.appendChild(klon);
 		   });
