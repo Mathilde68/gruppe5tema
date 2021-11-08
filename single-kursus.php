@@ -31,7 +31,7 @@ get_header();
 <script>
         
         let kursus;
-		const dbUrl = "https://xn--mflingo-q1a.dk/kea/ungdomsbyen/wp-json/wp/v2/kursus/"+<?php echo get_the_ID() ?>');
+		const dbUrl = "https://xn--mflingo-q1a.dk/kea/ungdomsbyen/wp-json/wp/v2/kursus/"+<?php echo get_the_ID() ?>;
         
 
         async function getJson() { 
@@ -68,27 +68,9 @@ get_header();
 
 	</section>
 
-<?php>
-
-get_footer();
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <?php
+
 get_footer();
+
+?>
+

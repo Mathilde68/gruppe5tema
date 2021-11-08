@@ -24,22 +24,8 @@ get_header();
 
 		<main id="main" class="site-main">
         <section class="filter_section">
-            <div id="tema1">
-                <img src="" alt="">
-                <button>Konflikthåndtering</button>
-            </div>
-            <div id="tema2">
-                <img src="" alt="">
-                <button>Fn's 17 verdensmål</button>
-            </div>
-            <div id="tema3">
-                <img src="" alt="">
-                <button>Økonomi</button>
-            </div>
-            <div id="tema4">
-                <img src="" alt="">
-                <button>Demokrati og Medborgerskab</button>
-            </div>
+      
+        
 </section>
 <section id="oversigt"></section>
 
@@ -81,15 +67,16 @@ get_header();
                 klon.querySelector("img").src = kursus.billede.guid;
                 klon.querySelector(".kortbeskrivelse").textContent = kursus.kort_beskrivelse;
                 klon.querySelector(".pris").textContent = kursus.pris;
+                klon.querySelector(".seMere").addEventListener("click", () => location.href=kursus.link);
 
                 destination.appendChild(klon);
 
-        klon.querySelector(".seMere").addEventListener("click", () => visSingle(kursus));
+       
             });
         }
 
 
-function visSingle(){}
+
 
 
 	  hentData();
