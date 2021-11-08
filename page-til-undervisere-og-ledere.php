@@ -13,32 +13,21 @@ get_header();
 	<section id="section" class="content-area">
 
 	<main id="main" class="site-main">
-	<section class="filter_section">
-            <div id="tema2">
-                <img src="" alt="">
-                <button>Fn's 17 verdensmål</button>
-            </div>
-            <div id="tema3">
-                <img src="" alt="">
-                <button>LGBTQ+ og normer</button>
-            </div>
-            <div id="tema4">
-                <img src="" alt="">
-                <button >Demokrati og Medborgerskab</button>
-            </div>
-</section>
-			<section id="oversigt"></section>
+
+	<h2>Kursus til undervisere og ledere</h2>
+
+
+	<nav class="filter_section">
+        <button data-kategori= "alle" class="valgt">Alle</button>
+        <button data-kategori= "tema2">FN´s 17 verdensmål</button>
+        <button data-kategori = "tema3">LGBTQ+ og normer</button>
+        <button data-kategori= "tema4">Demokrati og medborgerskab</button>
+    </nav>
+	<section id="oversigt"></section>		
+
 		</main><!-- #main -->
 		
 		<template>
-
-		<nav>
-        <button data-kategori= "alle" class="valgt">Alle</button>
-        <button data-kategori= "forretter">Forretter</button>
-        <button data-kategori = "hovedretter">Hovedretter</button>
-        <button data-kategori= "desserter">Desserter</button>
-        <button data-kategori= "drikkevarer">Drikkevarer</button>
-    </nav>
 
 		<article class="kurset">
 		<h3 class="navn"></h3>
@@ -52,31 +41,25 @@ get_header();
     </template>
 
 		
-<script>let kurser;
+<script>
+
+let kurser;
       
 	  //url til wp restapi db - læg mærke til den her kun indhenter data med kategori 7 (numreringen på til undervisere og ledere kategorien)
 	  const url = "https://xn--mflingo-q1a.dk/kea/ungdomsbyen/wp-json/wp/v2/kursus?categories=7";
 	 
 //filtrer knap, her defineres der filtreringsknapper og laver click event
-
-let kruser;
 let filter = "alle";
+let filterKnapper = document.querySelectorAll("nav button");
 
-const filterKnapper = document.querySelectorAll("button");
 filterKnapper.forEach(knap => knap.addEventListener("click", filtrerKurser));
-hentData();
 
 function filtrerKurser (){
-	filter = this.dataset.kategori;
-	document.querySelector(".")
+	filter = this.dataset.tema;
+	document.querySelector(".valgt").classList.remove("valgt");
+    this.classList.add("valgt");
+	visKurser();
 }
-
-
-
- 	//const for destinationen af indholdet og templaten
-			 const destination = document.querySelector("#oversigt");
-            let template = document.querySelector("template");
-
 
 	  // asynkron function som afventer og indhenter json data fra restdb
 	  async function hentData() {
@@ -87,9 +70,13 @@ function filtrerKurser (){
 
 	  function visKurser(){
 		  console.log(kurser);
-          destination.textContent = "";
+		   	//const for destinationen af indholdet og templaten
+			   const destination = document.querySelector("#oversigt");
+            let kursusTemplate = document.querySelector("template");
+			destination.textContent = "";
 		  kurser.forEach(kursus => {
-			   const klon = template.cloneNode(true).content;
+			  if(filter == kursus.tema || filter == "alle"){ 
+			   const klon = kursusTemplate.cloneNode(true).content;
 			   klon.querySelector(".navn").textContent = kursus.navn;
                 klon.querySelector("img").src = kursus.billede.guid;
                 klon.querySelector(".kortbeskrivelse").textContent = kursus.kort_beskrivelse;
@@ -97,9 +84,10 @@ function filtrerKurser (){
 
 				klon.querySelector(".seMere").addEventListener("click", () => location.href=kursus.link);
 			   destination.appendChild(klon);
-		   });
-	  }
-
+		   }
+		});
+	  
+	}
 	  hentData();
 
 </script>
