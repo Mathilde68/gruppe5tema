@@ -16,14 +16,15 @@ get_header();
 
 	<h2>Kursus til undervisere og ledere</h2>
 
-	
+	<section id="oversigt"></section>
+
 	<nav class="filter_section">
         <button data-kategori= "alle" class="valgt">Alle</button>
         <button data-kategori= "tema2">FN´s 17 verdensmål</button>
         <button data-kategori = "tema3">LGBTQ+ og normer</button>
         <button data-kategori= "tema4">Demokrati og medborgerskab</button>
     </nav>
-			<section id="oversigt"></section>
+			
 		</main><!-- #main -->
 		
 		<template>
@@ -62,7 +63,7 @@ function filtrerKurser (){
 
 	  // asynkron function som afventer og indhenter json data fra restdb
 	  async function hentData() {
-		  const jsonData = await fetch(url);
+		  const jsonData = await fetch(url, option);
 		  kurser = await jsonData.json();
 		  visKurser();
 	  }
