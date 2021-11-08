@@ -23,7 +23,24 @@ get_header();
 	<section id="section" class="content-area">
 
 		<main id="main" class="site-main">
-
+        <section class="filter_section">
+            <div id="tema1">
+                <img src="" alt="">
+                <button>Konflikthåndtering</button>
+            </div>
+            <div id="tema2">
+                <img src="" alt="">
+                <button>Fn's 17 verdensmål</button>
+            </div>
+            <div id="tema3">
+                <img src="" alt="">
+                <button>Økonomi</button>
+            </div>
+            <div id="tema4">
+                <img src="" alt="">
+                <button>Demokrati og Medborgerskab</button>
+            </div>
+</section>
 <section id="oversigt"></section>
 
 		</main><!-- #main -->
