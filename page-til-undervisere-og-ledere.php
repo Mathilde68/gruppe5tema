@@ -52,7 +52,6 @@ let filter = "alle";
 
 const filterKnapper = document.querySelectorAll("nav button");
 filterKnapper.forEach(knap => knap.addEventListener("click", filtrerKurser));
-hentData();
 
 function filtrerKurser (){
 	filter = this.dataset.kategori;
@@ -60,6 +59,7 @@ function filtrerKurser (){
     this.classList.add("valgt");
 	visKurser();
 }
+hentData();
 
 
 	  // asynkron function som afventer og indhenter json data fra restdb
@@ -73,7 +73,7 @@ function filtrerKurser (){
 		  console.log(kurser);
 		   	//const for destinationen af indholdet og templaten
 			   const destination = document.querySelector("#oversigt");
-            let template = document.querySelector("template").content;
+            let template = document.querySelector("template");
           destination.textContent = "";
 		  kurser.forEach(kursus => {
 			  if(filter == kursus.tema || filter == "alle"){ 
