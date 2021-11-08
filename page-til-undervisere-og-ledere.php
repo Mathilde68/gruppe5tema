@@ -50,8 +50,8 @@ let kurser;
 	 
 //filtrer knap, her defineres der filtreringsknapper og laver click event
 let filter = "alle";
+let filterKnapper = document.querySelectorAll("nav button");
 
-const filterKnapper = document.querySelectorAll("nav button");
 filterKnapper.forEach(knap => knap.addEventListener("click", filtrerKurser));
 
 function filtrerKurser (){
@@ -63,7 +63,7 @@ function filtrerKurser (){
 
 	  // asynkron function som afventer og indhenter json data fra restdb
 	  async function hentData() {
-		  const jsonData = await fetch(url, option);
+		  const jsonData = await fetch(url);
 		  kurser = await jsonData.json();
 		  visKurser();
 	  }
@@ -72,10 +72,11 @@ function filtrerKurser (){
 		  console.log(kurser);
 		   	//const for destinationen af indholdet og templaten
 			   const destination = document.querySelector("#oversigt");
-            let template = document.querySelector("template");
+            let kursusTemplate = document.querySelector("template");
+			destination.textContent = "";
 		  kurser.forEach(kursus => {
 			  if(filter == kursus.tema || filter == "alle"){ 
-			   const klon = template.cloneNode(true).content;
+			   const klon = kursusTemplate.cloneNode(true);
 			   klon.querySelector(".navn").textContent = kursus.navn;
                 klon.querySelector("img").src = kursus.billede.guid;
                 klon.querySelector(".kortbeskrivelse").textContent = kursus.kort_beskrivelse;
