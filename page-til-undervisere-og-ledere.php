@@ -50,14 +50,14 @@ let kurser;
 //filtrer knap, her defineres der filtreringsknapper og laver click event
 let filter = "alle";
 
-const filterKnapper = document.querySelectorAll(".filter_section");
+const filterKnapper = document.querySelectorAll("nav button");
 filterKnapper.forEach(knap => knap.addEventListener("click", filtrerKurser));
 hentData();
 
 function filtrerKurser (){
 	filter = this.dataset.kategori;
-	document.querySelector(".valgt").classList.remove.("valgt");
-	this.classList.add("valgt");
+	document.querySelector(".valgt").classList.remove("valgt");
+    this.classList.add("valgt");
 	visKurser();
 }
 
