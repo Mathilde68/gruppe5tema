@@ -23,7 +23,10 @@ get_header();
 	<section id="section" class="content-area">
 
 		<main id="main" class="site-main">
-
+        <section class="filter_section">
+      
+        
+</section>
 <section id="oversigt"></section>
 
 		</main><!-- #main -->
@@ -64,15 +67,16 @@ get_header();
                 klon.querySelector("img").src = kursus.billede.guid;
                 klon.querySelector(".kortbeskrivelse").textContent = kursus.kort_beskrivelse;
                 klon.querySelector(".pris").textContent = kursus.pris;
+                klon.querySelector(".seMere").addEventListener("click", () => location.href=kursus.link);
 
                 destination.appendChild(klon);
 
-        klon.querySelector(".seMere").addEventListener("click", () => visSingle(kursus));
+       
             });
         }
 
 
-function visSingle(){}
+
 
 
 	  hentData();
