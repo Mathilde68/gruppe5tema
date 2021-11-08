@@ -73,7 +73,6 @@ function filtrerKurser (){
 		   	//const for destinationen af indholdet og templaten
 			   const destination = document.querySelector("#oversigt");
             let template = document.querySelector("template");
-          destination.textContent = "";
 		  kurser.forEach(kursus => {
 			  if(filter == kursus.tema || filter == "alle"){ 
 			   const klon = template.cloneNode(true).content;
