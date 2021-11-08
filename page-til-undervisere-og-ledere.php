@@ -60,7 +60,24 @@ Gennem samarbejdet med lærere og skoleledere i hele uddannelsessektoren har vi 
         </article>
     </template>
 
-		
+<style>
+	 
+
+.beskrivelser { 
+display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  row-gap: 20px;
+  column-gap: 40px;
+  padding: 2rem;
+  margin: auto;
+  max-width: 1700px;
+}	
+
+
+</style>
+
+
+
 <script>
 
 let kurser;
