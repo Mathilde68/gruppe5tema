@@ -17,10 +17,13 @@ get_header();
 		</main><!-- #main -->
 		
 		<template>
-        <article class="kurset">
-         <h3 class="navn"></h3>
-		 <img src="" alt="" class="billede">
-		 <p class="beskrivelse"></p>
+    	<article class="kurset">
+		<h3 class="navn"></h3>
+            <img src="" alt="">
+            <div>
+            <p class="kortbeskrivelse"></p>
+            <p class="pris"></p>
+            </div>
         </article>
     </template>
 
@@ -50,9 +53,10 @@ get_header();
         
 			   const klon = template.cloneNode(true).content;
 
-			   klon.querySelector(".navn").textContent = kursus.title.rendered;
-			   klon.querySelector("img").src = kursus.billede.guid;
-			   klon.querySelector(".beskrivelse").textContent = kursus.kort_beskrivelse;
+			   klon.querySelector(".navn").textContent = kursus.navn;
+                klon.querySelector("img").src = kursus.billede.guid;
+                klon.querySelector(".kortbeskrivelse").textContent = kursus.kort_beskrivelse;
+                klon.querySelector(".pris").textContent = kursus.pris;
 		   
 
 
