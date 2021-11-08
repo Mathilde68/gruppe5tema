@@ -38,7 +38,7 @@ label {font-family: courier}
 
 #wpforms-submit-172 {color: white; background-color: black; border-radius: 20px; font-family: courier}
 
-#colophon{
+#colophon.widget-area{
   display: none;
 }
 
