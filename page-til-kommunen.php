@@ -17,29 +17,28 @@ get_header();
 	<section id="intro">
 	<div class="introboks"><p class="introtekst">Undervisning i uddannelsesvalg, demokratisk dannelse og FN’s verdensmålHvordan udbreder kommunen sine vigtige budskaber om demokrati og erhvervsuddannelser til grundskolerne og ungdomsuddannelserne? Hvordan bruger kommunen FN’s verdensmål, som kompas for en bæredygtig fremtid?</p>
 		</div>
-		<section class="filter_section">
 		<h2>Vælg imellem vores temaer</h2>
-            <div id="alle">
-                <img src="" alt="">
+		<div class="filter_section">
+            <div id="alle" class="buttonContainer">
+                <img src="https://xn--mflingo-q1a.dk/kea/ungdomsbyen/wp-content/uploads/2021/11/konflikt.png" alt="">
                 <button id="filterknap" class="valgt" data-kategori="alle">Alle kurser</button>
             </div>
-			<div id="tema1">
-                <img src="" alt="">
-                 <button id="filterknap" class="" data-kategori="Konflikthåndtering">Uddannelsesvalg</button>
+			<div id="tema1" class="buttonContainer">
+                <img src="https://xn--mflingo-q1a.dk/kea/ungdomsbyen/wp-content/uploads/2021/11/konflikt.png" alt="">
+                 <button id="filterknap" class="" data-kategori="Uddannelsesvalg">Uddannelsesvalg</button>
             </div>
-            <div id="tema2">
-                <img src="" alt="">
-                <button id="filterknap" class="" data-kategori="FN">Demokrati og medborgerskab</button>
+            <div id="tema2" class="buttonContainer">
+                <img src="https://xn--mflingo-q1a.dk/kea/ungdomsbyen/wp-content/uploads/2021/11/konflikt.png" alt="">
+                <button id="filterknap" class="" data-kategori="Demokrati og medborgerskab">Demokrati og medborgerskab</button>
             </div>
-
-			<h2 id="overskrift">Kurser til ungdomsuddanelser</h2>
-
-			</section>
+			</div>
+			<h2 id="overskrift">Kurser til kommunen</h2>
+	</section>
+			
 
 			<section id="oversigt">
 
 			</section>
-
 		</main><!-- #main -->
 		
 		<template>
@@ -104,16 +103,19 @@ Let nyOverskrift = document.querySelector("#overskrift");
 		  destination.textContent = "";
 
 		  kurser.forEach(kursus => {
+
+			 if (filter == kursus.tema || filter == "alle") {
 			   const klon = template.cloneNode(true).content;
 			   klon.querySelector(".navn").textContent = kursus.navn;
                 klon.querySelector("img").src = kursus.billede.guid;
                 klon.querySelector(".kortbeskrivelse").textContent = kursus.kort_beskrivelse;
-                klon.querySelector(".pris").textContent = kursus.pris;
+                klon.querySelector(".pris").textContent = "Pris: "+ kursus.pris;
 
-		   
 				klon.querySelector(".seMere").addEventListener("click", () => location.href=kursus.link);
 
+
 			   destination.appendChild(klon);
+			}
 		   });
 	  }
 
