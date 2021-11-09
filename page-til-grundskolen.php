@@ -23,23 +23,27 @@ get_header();
 	<section id="section" class="content-area">
 
 		<main id="main" class="site-main">
-        <section class="filter_section">
-            <div id="tema1">
-                <img src="" alt="">
-                <button>Konflikthåndtering</button>
+        <div class="filter_section">
+        <div id="alle" class="buttonContainer">
+               
+                <button id="filterknap" class="valgt" data-kategori="alle">Alle kurser</button>
             </div>
-            <div id="tema2">
-                <img src="" alt="">
-                <button>Fn's 17 verdensmål</button>
+            <div id="tema1" class="buttonContainer">
+                
+                <button id="filterknap" class="" data-kategori="Konflikthåndtering">Konflikthåndtering</button>
             </div>
-            <div id="tema3">
-                <img src="" alt="">
-                <button>Økonomi</button>
+            <div id="tema2" class="buttonContainer">
+             
+                <button id="filterknap" class="" data-kategori="Fn's 17 verdensmål">Fn's 17 verdensmål</button>
             </div>
-            <div id="tema4">
-                <img src="" alt="">
-                <button >Demokrati og Medborgerskab</button>
+            <div id="tema3" class="buttonContainer">
+                <button id="filterknap" class="" data-kategori="Økonomi">Økonomi</button>
             </div>
+            <div id="tema3" class="buttonContainer">
+                <button id="filterknap" class="" data-kategori="Demokrati og Medborgerskab">Demokrati og medborgerskab</button>
+            </div>
+			</div>
+            <h2 id="overskrift">Kurser til ungdomsuddanelser</h2>
 </section>
 <section id="oversigt"></section>
 
@@ -49,7 +53,8 @@ get_header();
         </section><!-- #section -->
 
 <script>let kurser;
- 
+ let filter = "alle";
+let nyOverskrift = document.querySelector("#overskrift");
 
 
 
@@ -71,24 +76,49 @@ get_header();
 		  visKurser();
 	  }
 
+      const filterKnapper = document.querySelectorAll("#filterknap");
+            filterKnapper.forEach(knap => knap.addEventListener("click", filtrerMenu));
+
+	  function filtrerMenu() {
+		console.log(this.textContent);
+		 //  //sætter filters værdi lig med værdien fra data af den knap der førte ind i funktionen
+		  filter= this.dataset.kategori;
 
 
-	  function visKurser() {
-           
-            kurser.forEach(kursus => {
-                let klon = template.cloneNode(true).content;
-                klon.querySelector(".navn").textContent = kursus.navn;
-                klon.querySelector("img").src = kursus.billede.guid;
-                klon.querySelector(".kortbeskrivelse").textContent = kursus.kort_beskrivelse;
-                klon.querySelector(".pris").textContent = kursus.pris;
-                klon.querySelector(".seMere").addEventListener("click", () => location.href=kursus.link);
+		     //ændrer overskriften
+		  nyOverskrift.textContent = this.textContent + " til ungdomsuddannelser";
+		 
 
-                destination.appendChild(klon);
 
-       
-            });
+		   //fjerner oog tilføjer valgt class til den rigtige knap
+		   document.querySelector(".valgt").classList.remove("valgt");
+            this.classList.add("valgt");
+
+
+		  //kalder function vis kurser efter det nye filter er sat
+		  visKurser();
         }
 
+        function visKurser(){
+		  console.log(kurser);
+		  destination.textContent = "";
+
+		  kurser.forEach(kursus => {
+               
+			if (filter == kursus.tema || filter == "alle") {
+			   const klon = template.cloneNode(true).content;
+			   klon.querySelector(".navn").textContent = kursus.navn;
+                klon.querySelector("img").src = kursus.billede.guid;
+                klon.querySelector(".kortbeskrivelse").textContent = kursus.kort_beskrivelse;
+                klon.querySelector(".pris").textContent = "Pris: "+ kursus.pris;
+
+				klon.querySelector(".seMere").addEventListener("click", () => location.href=kursus.link);
+
+
+			   destination.appendChild(klon);
+			}
+		   });
+	  }
 
 
 

@@ -28,7 +28,6 @@
 
 
 
-Our special front page
 
 	<?php if ( ! twentynineteen_can_show_post_thumbnail() ) : ?>
 
