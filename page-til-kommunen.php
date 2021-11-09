@@ -56,7 +56,7 @@ get_header();
 		
 <script>let kurser;
 let filter = "alle";
-Let nyOverskrift = document.querySelector("#overskrift");
+let nyOverskrift = document.querySelector("#overskrift");
       
 	  //url til wp restapi db - læg mærke til den her kunindhenter data med kategori 8 (numreringen på til kommunen kategorien)
 	  const url = "https://xn--mflingo-q1a.dk/kea/ungdomsbyen/wp-json/wp/v2/kursus?categories=8";
