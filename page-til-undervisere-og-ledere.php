@@ -41,9 +41,9 @@ Gennem samarbejdet med lærere og skoleledere i hele uddannelsessektoren har vi 
 </section>
 	<nav class="filter_section">
         <button data-kategori= "alle" class="valgt">Alle</button>
-        <button data-kategori= "tema2">FN´s 17 verdensmål</button>
-        <button data-kategori = "tema3">LGBTQ+ og normer</button>
-        <button data-kategori= "tema4">Demokrati og medborgerskab</button>
+        <button data-kategori= "Fn´s 17 verdensmål">FN´s 17 verdensmål</button>
+        <button data-kategori = "LGBTQ+ og normer">LGBTQ+ og normer</button>
+        <button data-kategori= "Demokrati og medborgerskab">Demokrati og medborgerskab</button>
     </nav>
 	<section id="oversigt"></section>		
 
