@@ -20,9 +20,10 @@ get_header();
 </article>
 </template>
 
-	<section id="section" class="content-area">
 
-	<main id="main" class="site-main">
+	<main id="main" class="site-main"></main><!-- #main -->
+
+	<section id="section" class="content-area">
 
 	<h2>Kursus til undervisere og ledere</h2>
 
@@ -60,7 +61,7 @@ Gennem samarbejdet med lærere og skoleledere i hele uddannelsessektoren har vi 
 	</section>
 
 	<section id="oversigt"></section>
-		</main><!-- #main -->
+
 
 		</section><!-- #section -->
 
