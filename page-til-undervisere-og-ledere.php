@@ -65,26 +65,6 @@ Gennem samarbejdet med lærere og skoleledere i hele uddannelsessektoren har vi 
 	
 	<section id="oversigt">	</section>
 
-<style>
-	 
-
-.beskrivelse { 
-display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-  margin: auto;
-  max-width: 1100px;
-}	
-
-img{
-	width: 100%;
-	height: 75%;
-	object-fit: cover;
-}
-
-</style>
-
-
-
 <script>
 
 let kurser;
