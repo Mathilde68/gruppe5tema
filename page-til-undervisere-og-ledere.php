@@ -8,7 +8,18 @@ get_header();
 
 ?>
 
+<template>
 
+<article class="kurset">
+<h3 class="navn"></h3>
+	<img src="" alt="">
+	<div>
+	<p class="kortbeskrivelse"></p>
+	<p class="pris"></p>
+	<button class="seMere">Læs mere</button>
+	</div>
+</article>
+</template>
 
 	<section id="section" class="content-area">
 
@@ -38,27 +49,16 @@ Gennem samarbejdet med lærere og skoleledere i hele uddannelsessektoren har vi 
 <p> <span><button class="kontaktOs">Kontakt os</button></span> og bliv en del af Ungdomsbyens netværk </p>
 
 </div>
-<template>
-
-<article class="kurset">
-<h3 class="navn"></h3>
-	<img src="" alt="">
-	<div>
-	<p class="kortbeskrivelse"></p>
-	<p class="pris"></p>
-	<button class="seMere">Læs mere</button>
-	</div>
-</article>
-</template>
-
 
 </section>
 	<nav>
         <button data-kategori= "alle" class="valgt">Alle</button>
-        <button data-kategori= "Fn´s 17 verdensmål">FN´s 17 verdensmål</button>
+        <button data-kategori= "Fn´s 17 verdensmål">Fn´s 17 verdensmål</button>
         <button data-kategori = "LGBTQ+ og normer">LGBTQ+ og normer</button>
         <button data-kategori= "Demokrati og medborgerskab">Demokrati og medborgerskab</button>
     </nav>		
+
+	</section>
 
 	<section id="oversigt"></section>
 		</main><!-- #main -->
