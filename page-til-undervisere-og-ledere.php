@@ -14,11 +14,9 @@ get_header();
 <article class="kurset">
 <h3 class="navn"></h3>
 	<img src="" alt="">
-	<div>
 	<p class="kortbeskrivelse"></p>
 	<p class="pris"></p>
 	<button class="seMere">Læs mere</button>
-	</div>
 </article>
 </template>
 
