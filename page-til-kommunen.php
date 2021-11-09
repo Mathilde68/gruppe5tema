@@ -14,6 +14,26 @@ get_header();
 
 	<main id="main" class="site-main">
 
+
+	<?php
+
+// Start the Loop.
+while ( have_posts() ) :
+    the_post();
+
+    get_template_part( 'template-parts/content/content', 'page' );
+
+    // If comments are open or we have at least one comment, load up the comment template.
+    if ( comments_open() || get_comments_number() ) {
+        comments_template();
+    }
+
+endwhile; // End the loop.
+?>
+
+
+
+
 	<section id="intro">
 	<div class="introboks"><p class="introtekst">Undervisning i uddannelsesvalg, demokratisk dannelse og FN’s verdensmålHvordan udbreder kommunen sine vigtige budskaber om demokrati og erhvervsuddannelser til grundskolerne og ungdomsuddannelserne? Hvordan bruger kommunen FN’s verdensmål, som kompas for en bæredygtig fremtid?</p>
 		</div>
@@ -24,7 +44,7 @@ get_header();
                 <button id="filterknap" class="valgt" data-kategori="alle">Alle kurser</button>
             </div>
 			<div id="tema1" class="buttonContainer">
-                <img src="https://xn--mflingo-q1a.dk/kea/ungdomsbyen/wp-content/uploads/2021/11/konflikt.png" alt="">
+                <img src="https://xn--mflingo-q1a.dk/kea/ungdomsbyen/wp-content/uploads/2021/11/uddanelsesvalg.png" alt="">
                  <button id="filterknap" class="" data-kategori="Uddannelsesvalg">Uddannelsesvalg</button>
             </div>
             <div id="tema2" class="buttonContainer">
