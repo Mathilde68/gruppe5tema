@@ -63,6 +63,8 @@ Gennem samarbejdet med lærere og skoleledere i hele uddannelsessektoren har vi 
 	<section id="oversigt"></section>
 		</main><!-- #main -->
 
+		</section><!-- #section -->
+
 
 <style>
 	 
@@ -135,8 +137,6 @@ function filtrerKurser (){
 	  hentData();
 
 </script>
-
-	</section><!-- #section -->
 
 
 <?php
