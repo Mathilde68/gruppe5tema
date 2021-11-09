@@ -81,13 +81,17 @@ display: grid;
 <script>
 
 let kurser;
-      
+//filtrer knap, her defineres der filtreringsknapper og laver click event
+let filter = "alle";
+
+ 
 	  //url til wp restapi db - læg mærke til den her kun indhenter data med kategori 7 (numreringen på til undervisere og ledere kategorien)
 	  const url = "https://xn--mflingo-q1a.dk/kea/ungdomsbyen/wp-json/wp/v2/kursus?categories=7";
 	 
-//filtrer knap, her defineres der filtreringsknapper og laver click event
-let filter = "alle";
-let filterKnapper = document.querySelectorAll(".filter_section");
+
+		   	//const for destinationen af indholdet og templaten
+			   const destination = document.querySelector("#oversigt");
+            let kursusTemplate = document.querySelector("template");
 
 	  // asynkron function som afventer og indhenter json data fra restdb
 	  async function hentData() {
@@ -96,6 +100,7 @@ let filterKnapper = document.querySelectorAll(".filter_section");
 		  visKurser();
 	  }
 
+let filterKnapper = document.querySelectorAll(".filter_section");
 filterKnapper.forEach(knap => knap.addEventListener("click", filtrerKurser));
 
 function filtrerKurser (){
@@ -108,10 +113,6 @@ function filtrerKurser (){
 	  function visKurser(){
 		  console.log(kurser);
 		  destination.textContent = "";
-		   	//const for destinationen af indholdet og templaten
-			   const destination = document.querySelector("#oversigt");
-            let kursusTemplate = document.querySelector("template");
-			destination.textContent = "";
 		  kurser.forEach(kursus => {
 			  if(filter == kursus.tema || filter == "alle"){ 
 			   const klon = kursusTemplate.cloneNode(true).content;
