@@ -48,7 +48,6 @@ get_header();
 
 		<main id="main" class="site-main">
 
-<<<<<<< HEAD
         <?php
 
 // Start the Loop.
@@ -69,8 +68,6 @@ endwhile; // End the loop.
 
 
 
-=======
->>>>>>> 0e0d10f5db6ff21967fcac8659637b0552213d89
         <div class="filter_section">
 
         <div id="alle" class="buttonContainer">
