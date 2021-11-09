@@ -14,11 +14,13 @@ get_header();
 
 	<main id="main" class="site-main">
 
-	<section class="beskrivelse"> 
-		<div class="beskrivelse_one"> 
 	<h2>Kursus til undervisere og ledere</h2>
 
-	<h3>Undervisning i bæredygtighed og ligestilling</h3>
+<h3>Undervisning i bæredygtighed og ligestilling</h3>
+
+	<section class="beskrivelse"> 
+
+		<div class="beskrivelse_one"> 
 
 	<p>Hvornår indgår Verdensmålene i lærerens, pædagogens og TAP’ernes professionelle arbejde?
 Hvor er elevrådene inkluderet i skolens demokrati? Hvad er strategien for antiradikalisering?
@@ -63,7 +65,7 @@ Gennem samarbejdet med lærere og skoleledere i hele uddannelsessektoren har vi 
 <style>
 	 
 
-.beskrivelser { 
+.beskrivelse { 
 display: grid;
   grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
   row-gap: 20px;
@@ -113,6 +115,7 @@ function filtrerKurser (){
 	  function visKurser(){
 		  console.log(kurser);
 		  destination.textContent = "";
+		  
 		  kurser.forEach(kursus => {
 			  if(filter == kursus.tema || filter == "alle"){ 
 			   const klon = kursusTemplate.cloneNode(true).content;
