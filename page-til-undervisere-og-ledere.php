@@ -8,6 +8,7 @@ get_header();
 
 ?>
 
+<section id="section" class="content-area">
 
 <template>
 <article class="kurset">
@@ -24,7 +25,7 @@ get_header();
 
 	<main id="main" class="site-main"></main><!-- #main -->
 
-	<section id="section" class="content-area">
+	
 
 	<h2>Kursus til undervisere og ledere</h2>
 
