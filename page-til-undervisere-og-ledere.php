@@ -75,6 +75,11 @@ display: grid;
   max-width: 1100px;
 }	
 
+img{
+	width: 100%;
+	height: 75%;
+	object-fit: cover;
+}
 
 </style>
 
