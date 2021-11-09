@@ -53,7 +53,7 @@ Gennem samarbejdet med lærere og skoleledere i hele uddannelsessektoren har vi 
 
 
 </section>
-	<nav class="filter_section">
+	<nav>
         <button data-kategori= "alle" class="valgt">Alle</button>
         <button data-kategori= "Fn´s 17 verdensmål">FN´s 17 verdensmål</button>
         <button data-kategori = "LGBTQ+ og normer">LGBTQ+ og normer</button>
@@ -104,7 +104,7 @@ let filter = "alle";
 		  visKurser();
 	  }
 
-let filterKnapper = document.querySelectorAll(".filter_section");
+let filterKnapper = document.querySelectorAll("nav button");
 filterKnapper.forEach(knap => knap.addEventListener("click", filtrerKurser));
 
 function filtrerKurser (){
