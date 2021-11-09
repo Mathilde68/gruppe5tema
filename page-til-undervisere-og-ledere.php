@@ -60,8 +60,6 @@ Gennem samarbejdet med lærere og skoleledere i hele uddannelsessektoren har vi 
         </article>
     </template>
 
-	</section><!-- #section -->
-
 <style>
 	 
 
@@ -131,7 +129,7 @@ function filtrerKurser (){
 
 </script>
 
-	
+	</section><!-- #section -->
 
 
 <?php
