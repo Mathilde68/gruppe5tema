@@ -12,25 +12,40 @@ get_header();
 
 	<section id="section" class="content-area">
 
-	<main id="main" class="site-main">
-	<section class="filter_section">
-            <div id="tema1">
-                <img src="" alt="">
-                <button>Konflikthåndtering</button>
-            </div>
-            <div id="tema2">
-                <img src="" alt="">
-                <button>Fn's 17 verdensmål</button>
-            </div>
-            <div id="tema3">
-                <img src="" alt="">
-                <button>LGBTQ+ og normer</button>
-            </div>
+	
+	<h2>Vælg imellem vores temaer</h2>
+	<nav class="filter_section">
+	<div id="alle" class="buttonContainer">
+<img src="https://xn--mflingo-q1a.dk/kea/ungdomsbyen/wp-content/uploads/2021/11/konflikt.png" alt="">
+<button id="filterknap" class="valgt" data-kategori="alle">Alle kurser</button>
+</div>
+
+<div id="tema1" class="buttonContainer">
+<img src="https://xn--mflingo-q1a.dk/kea/ungdomsbyen/wp-content/uploads/2021/11/konflikt.png" alt="">
+<button id="filterknap" class="" data-kategori="Konflikthåndtering">Konflikthåndtering</button>
+</div>
+
+<div id="tema2" class="buttonContainer">
+<img src="https://xn--mflingo-q1a.dk/kea/ungdomsbyen/wp-content/uploads/2021/11/konflikt.png" alt="">
+<button id="filterknap" class="" data-kategori="Fn's 17 verdensmål">Fn's 17 verdensmål</button>
+</div>
+
+<div id="tema3" class="buttonContainer">
+<img src="https://xn--mflingo-q1a.dk/kea/ungdomsbyen/wp-content/uploads/2021/11/konflikt.png" alt="">
+<button id="filterknap" class="" data-kategori="LGBTQ+ og normer">LGBTQ+ og normer</button>
+</div>
            
-</section>
+</nav>
+	<main id="main" class="site-main">
+	
+<h2 id="overskrift">Online kurser</h2>
 			<section id="oversigt"></section>
+
+
 		</main><!-- #main -->
 		
+
+
 		<template>
     	<article class="kurset">
 		<h3 class="navn"></h3>
@@ -45,6 +60,9 @@ get_header();
 
 		
 <script>let kurser;
+let filter = "alle";
+
+let nyOverskrift = document.querySelector("#overskrift");
       
 	  //url til wp restapi db - læg mærke til den her kun indhenter data med kategori 5 (numreringen på online kategorien)
 	  const url = "https://xn--mflingo-q1a.dk/kea/ungdomsbyen/wp-json/wp/v2/kursus?categories=5";
@@ -61,23 +79,64 @@ get_header();
 		  visKurser();
 	  }
 
+
+	  const filterKnapper = document.querySelectorAll("#filterknap");
+
+            filterKnapper.forEach(knap => knap.addEventListener("click", filtrerMenu));
+
+
+
+	  function filtrerMenu() {
+
+		console.log(this.textContent);
+
+		 //  //sætter filters værdi lig med værdien fra data af den knap der førte ind i funktionen
+
+		  filter= this.dataset.kategori;
+
+
+		     //ændrer overskriften
+
+		  nyOverskrift.textContent = this.textContent + " online";
+
+		 
+		   //fjerner oog tilføjer valgt class til den rigtige knap
+
+		   document.querySelector(".valgt").classList.remove("valgt");
+
+            this.classList.add("valgt");
+
+
+
+		  //kalder function vis kurser efter det nye filter er sat
+
+		  visKurser();
+
+        }
+
+
+
+
 	  function visKurser(){
 		  console.log(kurser);
 
+		  
+		destination.textContent = "";
 		  kurser.forEach(kursus => {
-               
-        
-			   const klon = template.cloneNode(true).content;
+if (filter == kursus.tema || filter == "alle") {
 
-			   klon.querySelector(".navn").textContent = kursus.navn;
-                klon.querySelector("img").src = kursus.billede.guid;
-                klon.querySelector(".kortbeskrivelse").textContent = kursus.kort_beskrivelse;
-                klon.querySelector(".pris").textContent = kursus.pris;
-		   
-				klon.querySelector(".seMere").addEventListener("click", () => location.href=kursus.link);
+   const klon = template.cloneNode(true).content;
+   klon.querySelector(".navn").textContent = kursus.navn;
+	klon.querySelector("img").src = kursus.billede.guid;
+	klon.querySelector(".kortbeskrivelse").textContent = kursus.kort_beskrivelse;
+	klon.querySelector(".seMere").addEventListener("click", () => location.href=kursus.link);
 
-			   destination.appendChild(klon);
-		   });
+
+   destination.appendChild(klon);
+
+}
+
+});
 	  }
 
 	  hentData();

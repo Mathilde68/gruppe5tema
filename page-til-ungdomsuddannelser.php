@@ -24,67 +24,36 @@ get_header();
 
 	<section id="section" class="content-area">
 
-	
+	<h2>Vælg imellem vores temaer</h2>
+
+<nav class="filter_section">
+
+	<div id="alle" class="buttonContainer">
+		<img src="https://xn--mflingo-q1a.dk/kea/ungdomsbyen/wp-content/uploads/2021/11/konflikt.png" alt="">
+		<button id="filterknap" class="valgt" data-kategori="alle">Alle kurser</button>
+	</div>
+
+	<div id="tema1" class="buttonContainer">
+		<img src="https://xn--mflingo-q1a.dk/kea/ungdomsbyen/wp-content/uploads/2021/11/konflikt.png" alt="">
+		<button id="filterknap" class="" data-kategori="Konflikthåndtering">Konflikthåndtering</button>
+	</div>
+
+	<div id="tema2" class="buttonContainer">
+		<img src="https://xn--mflingo-q1a.dk/kea/ungdomsbyen/wp-content/uploads/2021/11/konflikt.png" alt="">
+		<button id="filterknap" class="" data-kategori="Fn's 17 verdensmål">Fn's 17 verdensmål</button>
+	</div>
+
+	<div id="tema3" class="buttonContainer">
+		<img src="https://xn--mflingo-q1a.dk/kea/ungdomsbyen/wp-content/uploads/2021/11/oekonomi.png" alt="">
+		<button id="filterknap" class="" data-kategori="Økonomi">Økonomi</button>
+	</div>
+
+</nav>
 
 	<main id="main" class="site-main">
 
-		
-
-	<section id="intro">
-
-	<div class="introboks"><p class="introtekst">Ungdomsbyens kurser til ungdomsuddannelser understøtter uddannelsernes fag. Se forneden vores udbudte kurser med fokus på at styrke elevernes globale udsyn, demokratiske forståelse, retorik, økonomiforståelse og konflikthåndteringsevner.</p>
-
-		</div>
-
-		<h2>Vælg imellem vores temaer</h2>
-
-		<div class="filter_section">
-
-	<div id="alle" class="buttonContainer">
-
-                <img src="https://xn--mflingo-q1a.dk/kea/ungdomsbyen/wp-content/uploads/2021/11/konflikt.png" alt="">
-
-                <button id="filterknap" class="valgt" data-kategori="alle">Alle kurser</button>
-
-            </div>
-
-            <div id="tema1" class="buttonContainer">
-
-                <img src="https://xn--mflingo-q1a.dk/kea/ungdomsbyen/wp-content/uploads/2021/11/konflikt.png" alt="">
-
-                <button id="filterknap" class="" data-kategori="Konflikthåndtering">Konflikthåndtering</button>
-
-            </div>
-
-            <div id="tema2" class="buttonContainer">
-
-                <img src="https://xn--mflingo-q1a.dk/kea/ungdomsbyen/wp-content/uploads/2021/11/konflikt.png" alt="">
-
-                <button id="filterknap" class="" data-kategori="Fn's 17 verdensmål">Fn's 17 verdensmål</button>
-
-            </div>
-
-            <div id="tema3" class="buttonContainer">
-
-                <img src="https://xn--mflingo-q1a.dk/kea/ungdomsbyen/wp-content/uploads/2021/11/oekonomi.png" alt="">
-
-                <button id="filterknap" class="" data-kategori="Økonomi">Økonomi</button>
-
-            </div>
-
-			</div>
-
 			<h2 id="overskrift">Kurser til ungdomsuddanelser</h2>
-
-</section>
-
-
-
-			<section id="oversigt">
-
-				
-
-			</section>
+			<section id="oversigt"></section>
 
 		</main><!-- #main -->
 
@@ -175,26 +144,16 @@ let nyOverskrift = document.querySelector("#overskrift");
 		  filter= this.dataset.kategori;
 
 
-
-
-
 		     //ændrer overskriften
 
 		  nyOverskrift.textContent = this.textContent + " til ungdomsuddannelser";
 
 		 
-
-
-
-
-
 		   //fjerner oog tilføjer valgt class til den rigtige knap
 
 		   document.querySelector(".valgt").classList.remove("valgt");
 
             this.classList.add("valgt");
-
-
 
 
 
@@ -221,21 +180,11 @@ let nyOverskrift = document.querySelector("#overskrift");
 			if (filter == kursus.tema || filter == "alle") {
 
 			   const klon = template.cloneNode(true).content;
-
 			   klon.querySelector(".navn").textContent = kursus.navn;
-
                 klon.querySelector("img").src = kursus.billede.guid;
-
                 klon.querySelector(".kortbeskrivelse").textContent = kursus.kort_beskrivelse;
-
                 klon.querySelector(".pris").textContent = "Pris: "+ kursus.pris;
-
-
-
 				klon.querySelector(".seMere").addEventListener("click", () => location.href=kursus.link);
-
-
-
 
 
 			   destination.appendChild(klon);

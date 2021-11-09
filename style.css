@@ -3,7 +3,7 @@ Theme Name: Child Theme 1
 Template: twentynineteen
 Author: Rosa Sahlholt
 Description: Stylish Child Theme based on Twenty Nineteen
-Version: 1.3.6.5
+Version: 1.3.7.0
 */
 img {
   width: 100%;
@@ -19,7 +19,7 @@ h4,
 p,
 li,
 a {
-  font-family: "Courier New", Courier, monospace;
+  font-family: "Helvetica Neue", "Courier New", Courier, monospace;
 }
 
 .main-navigation a {
@@ -112,11 +112,11 @@ input[type="submit"]:focus {
 
 .buttonContainer button {
   position: absolute;
-  bottom: 40%;
-  left: 25%;
+  bottom: 38%;
+  left: 18%;
   padding: 1em 1.5em;
   z-index: 1;
-  width: 220px;
+  width: 270px;
 }
 
 .filter_section {
@@ -144,7 +144,6 @@ input[type="submit"]:focus {
   font-family: Georgia, "Times New Roman", Times, serif;
 }
 
-// Til single page
-.kursus {
-  background-color: aqua;
+h1:not(.site-title):before, h2:before{
+  display: none;
 }
