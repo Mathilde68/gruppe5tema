@@ -43,7 +43,7 @@ get_header();
 		
 		<template>
 		<article class="kurset">
-		<h3 class="navn"></h3>
+		<h4 class="navn"></h4>
             <img src="" alt="">
             <div>
             <p class="kortbeskrivelse"></p>
@@ -94,11 +94,8 @@ Let nyOverskrift = document.querySelector("#overskrift");
 		  //kalder function vis kurser efter det nye filter er sat
 		  visKurser();
         }
-
-
-
-
-	  function visKurser(){
+		
+		function visKurser(){
 		  console.log(kurser);
 		  destination.textContent = "";
 
