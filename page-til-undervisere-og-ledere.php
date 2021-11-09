@@ -7,7 +7,7 @@
 get_header();
 
 ?>
-
+<section id="oversigt">
 <template>
 <article class="kurset">
 <h3 class="navn"></h3>
@@ -20,7 +20,7 @@ get_header();
 </article>
 </template>
 
-<section id="oversigt">
+
 	<main id="main" class="site-main"></main><!-- #main -->
 
 	<section id="section" class="content-area">
