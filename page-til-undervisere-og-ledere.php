@@ -53,7 +53,7 @@ Gennem samarbejdet med lærere og skoleledere i hele uddannelsessektoren har vi 
 </section>
 	<nav>
         <button data-kategori= "alle" class="valgt">Alle</button>
-        <button data-kategori= "Fn´s 17 verdensmål">Fn´s 17 verdensmål</button>
+        <button data-kategori="Fn's 17 verdensmål">Fn's 17 verdensmål</button>
         <button data-kategori = "LGBTQ+ og normer">LGBTQ+ og normer</button>
         <button data-kategori= "Demokrati og medborgerskab">Demokrati og medborgerskab</button>
     </nav>		
