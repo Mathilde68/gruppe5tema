@@ -24,7 +24,7 @@ get_header();
 
 	
 
-	<main id="main" class="site-main">
+	<main id="main" class="site-main"></main><!-- #main -->
 
 	<section id="intro">
 	<div class="introboks"><p class="introtekst">Undervisning i uddannelsesvalg, demokratisk dannelse og FN’s verdensmålHvordan udbreder kommunen sine vigtige budskaber om demokrati og erhvervsuddannelser til grundskolerne og ungdomsuddannelserne? Hvordan bruger kommunen FN’s verdensmål, som kompas for en bæredygtig fremtid?</p>
@@ -37,11 +37,11 @@ get_header();
             </div>
 			<div id="tema1" class="buttonContainer">
                 <img src="https://xn--mflingo-q1a.dk/kea/ungdomsbyen/wp-content/uploads/2021/11/konflikt.png" alt="">
-                 <button id="filterknap" class="" data-kategori="Uddannelsesvalg">Uddannelsesvalg</button>
+                 <button id="filterknap"  data-kategori="Uddannelsesvalg">Uddannelsesvalg</button>
             </div>
             <div id="tema2" class="buttonContainer">
                 <img src="https://xn--mflingo-q1a.dk/kea/ungdomsbyen/wp-content/uploads/2021/11/konflikt.png" alt="">
-                <button id="filterknap" class="" data-kategori="Demokrati og medborgerskab">Demokrati og medborgerskab</button>
+                <button id="filterknap" data-kategori="Demokrati og medborgerskab">Demokrati og medborgerskab</button>
             </div>
 			</div>
 			<h2 id="overskrift">Kurser til kommunen</h2>
@@ -54,7 +54,7 @@ get_header();
 
 			</section><!-- #section -->
 
-		</main><!-- #main -->
+		
 
 	
 		
