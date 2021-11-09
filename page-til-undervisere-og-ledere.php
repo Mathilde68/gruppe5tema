@@ -14,9 +14,29 @@ get_header();
 
 	<main id="main" class="site-main">
 
+	<section class="beskrivelse"> 
+		<div class="beskrivelse_one"> 
 	<h2>Kursus til undervisere og ledere</h2>
 
+	<h3>Undervisning i bæredygtighed og ligestilling</h3>
 
+	<p>Hvornår indgår Verdensmålene i lærerens, pædagogens og TAP’ernes professionelle arbejde?
+Hvor er elevrådene inkluderet i skolens demokrati? Hvad er strategien for antiradikalisering?
+Hvordan håndterer skolen inklusion af minoriteter, herunder LGBT-elever, -medarbejdere og -familier i skole-hjem-samarbejdet?
+
+Alle disse spørgsmål har Ungdomsbyen faglige bud på. I takt med samfundets udvikling tilbyder vi en tidssvarende kapacitetsopbygning, som styrker elevernes demokratiske dannelse, og lader skolens normer, udsyn og kultur fremstå vidende og åben for omverdenen.</p>
+</div>
+
+<div class="beskrivelse_two"> 
+
+<p>Ungdomsbyens kurser henvender sig til uddannelsessektorens ledere, fagfolk og undervisere, der vægter elevernes dannelse og forståelse af, hvad et globalt medborgerskab indebærer.
+
+Gennem samarbejdet med lærere og skoleledere i hele uddannelsessektoren har vi fingeren på pulsen og mange års erfaring med kurser og udviklingsforløb, der understøtter en fælles og bæredygtig fremtid.</p>
+
+<p> <span><button class="kontaktOs">Kontakt os</button></span> og bliv en del af Ungdomsbyens netværk </p>
+
+</div>
+</section>
 	<nav class="filter_section">
         <button data-kategori= "alle" class="valgt">Alle</button>
         <button data-kategori= "tema2">FN´s 17 verdensmål</button>
@@ -40,7 +60,26 @@ get_header();
         </article>
     </template>
 
-		
+	</section><!-- #section -->
+
+<style>
+	 
+
+.beskrivelser { 
+display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  row-gap: 20px;
+  column-gap: 40px;
+  padding: 2rem;
+  margin: auto;
+  max-width: 1700px;
+}	
+
+
+</style>
+
+
+
 <script>
 
 let kurser;
@@ -92,7 +131,7 @@ function filtrerKurser (){
 
 </script>
 
-	</section><!-- #section -->
+	
 
 
 <?php
