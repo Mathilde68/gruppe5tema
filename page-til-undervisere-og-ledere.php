@@ -87,7 +87,14 @@ let kurser;
 	 
 //filtrer knap, her defineres der filtreringsknapper og laver click event
 let filter = "alle";
-let filterKnapper = document.querySelectorAll("nav button");
+let filterKnapper = document.querySelectorAll(".filter_section");
+
+	  // asynkron function som afventer og indhenter json data fra restdb
+	  async function hentData() {
+		  const jsonData = await fetch(url);
+		  kurser = await jsonData.json();
+		  visKurser();
+	  }
 
 filterKnapper.forEach(knap => knap.addEventListener("click", filtrerKurser));
 
@@ -98,15 +105,9 @@ function filtrerKurser (){
 	visKurser();
 }
 
-	  // asynkron function som afventer og indhenter json data fra restdb
-	  async function hentData() {
-		  const jsonData = await fetch(url);
-		  kurser = await jsonData.json();
-		  visKurser();
-	  }
-
 	  function visKurser(){
 		  console.log(kurser);
+		  destination.textContent = "";
 		   	//const for destinationen af indholdet og templaten
 			   const destination = document.querySelector("#oversigt");
             let kursusTemplate = document.querySelector("template");
