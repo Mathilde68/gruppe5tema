@@ -23,34 +23,7 @@ get_header();
 
 	<main id="main" class="site-main"></main><!-- #main -->
 
-	
 
-	<h2>Kursus til undervisere og ledere</h2>
-
-<h3>Undervisning i bæredygtighed og ligestilling</h3>
-
-	<section class="beskrivelse"> 
-
-		<div class="beskrivelse_one"> 
-
-	<p>Hvornår indgår Verdensmålene i lærerens, pædagogens og TAP’ernes professionelle arbejde?
-Hvor er elevrådene inkluderet i skolens demokrati? Hvad er strategien for antiradikalisering?
-Hvordan håndterer skolen inklusion af minoriteter, herunder LGBT-elever, -medarbejdere og -familier i skole-hjem-samarbejdet?
-
-Alle disse spørgsmål har Ungdomsbyen faglige bud på. I takt med samfundets udvikling tilbyder vi en tidssvarende kapacitetsopbygning, som styrker elevernes demokratiske dannelse, og lader skolens normer, udsyn og kultur fremstå vidende og åben for omverdenen.</p>
-</div>
-
-<div class="beskrivelse_two"> 
-
-<p>Ungdomsbyens kurser henvender sig til uddannelsessektorens ledere, fagfolk og undervisere, der vægter elevernes dannelse og forståelse af, hvad et globalt medborgerskab indebærer.
-
-Gennem samarbejdet med lærere og skoleledere i hele uddannelsessektoren har vi fingeren på pulsen og mange års erfaring med kurser og udviklingsforløb, der understøtter en fælles og bæredygtig fremtid.</p>
-
-<p> <span><button class="kontaktOs">Kontakt os</button></span> og bliv en del af Ungdomsbyens netværk </p>
-
-</div>
-
-</section>	
 <nav>
         <button data-kategori= "alle" class="valgt">Alle</button>
         <button data-kategori="Fn's 17 verdensmål">Fn's 17 verdensmål</button>
