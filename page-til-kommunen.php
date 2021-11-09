@@ -8,7 +8,7 @@ get_header();
 
 ?>
 
-		
+<section id="section" class="content-area">	
 <template>
 		<article class="kurset">
 		<h4 class="navn"></h4>
@@ -22,7 +22,7 @@ get_header();
     </template>
 
 
-	<section id="section" class="content-area">
+	
 
 	<main id="main" class="site-main">
 
@@ -56,7 +56,17 @@ get_header();
 
 		</main><!-- #main -->
 
+	
 		
+
+
+
+
+
+
+    
+
+
 <script>let kurser;
 let filter = "alle";
 Let nyOverskrift = document.querySelector("#overskrift");
