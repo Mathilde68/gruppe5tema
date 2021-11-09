@@ -7,7 +7,8 @@
 get_header();
 
 ?>
-<section id="oversigt">
+<section id="oversigt">		</section><!-- #section -->
+
 <template>
 <article class="kurset">
 <h3 class="navn"></h3>
@@ -61,9 +62,6 @@ Gennem samarbejdet med lærere og skoleledere i hele uddannelsessektoren har vi 
 	</section>
 
 	</section>
-
-
-		</section><!-- #section -->
 
 
 <style>
