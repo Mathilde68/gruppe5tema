@@ -39,6 +39,9 @@ get_header();
 			<section id="oversigt">
 
 			</section>
+
+			</section><!-- #section -->
+
 		</main><!-- #main -->
 		
 		<template>
@@ -120,7 +123,7 @@ Let nyOverskrift = document.querySelector("#overskrift");
 
 </script>
 
-	</section><!-- #section -->
+
 
 
 <?php
