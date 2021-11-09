@@ -29,7 +29,7 @@ get_header();
             </div>
             <div id="tema2" class="buttonContainer">
                 <img src="https://xn--mflingo-q1a.dk/kea/ungdomsbyen/wp-content/uploads/2021/11/konflikt.png" alt="">
-                <button id="filterknap" class="" data-kategori="Fn verdensmål">Fn's 17 verdensmål</button>
+                <button id="filterknap" class="" data-kategori="Fn's 17 verdensmål">Fn's 17 verdensmål</button>
             </div>
             <div id="tema3" class="buttonContainer">
                 <img src="https://xn--mflingo-q1a.dk/kea/ungdomsbyen/wp-content/uploads/2021/11/konflikt.png" alt="">

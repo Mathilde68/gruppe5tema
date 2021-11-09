@@ -45,7 +45,7 @@ get_header();
                 <button id="filterknap" class="" data-kategori="Demokrati og Medborgerskab">Demokrati og medborgerskab</button>
             </div>
 			</div>
-            <h2 id="overskrift">Kurser til ungdomsuddanelser</h2>
+            <h2 id="overskrift">Kurser til grundskolen</h2>
 </section>
 <section id="oversigt"></section>
 
@@ -88,7 +88,7 @@ let nyOverskrift = document.querySelector("#overskrift");
 
 
 		     //ændrer overskriften
-		  nyOverskrift.textContent = this.textContent + " til ungdomsuddannelser";
+		  nyOverskrift.textContent = this.textContent + " til grundskolen";
 		 
 
 
