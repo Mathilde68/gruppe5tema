@@ -25,21 +25,23 @@ get_header();
 		<main id="main" class="site-main">
         <div class="filter_section">
         <div id="alle" class="buttonContainer">
-               
+        <img src="https://xn--mflingo-q1a.dk/kea/ungdomsbyen/wp-content/uploads/2021/11/konflikt.png" alt="">
                 <button id="filterknap" class="valgt" data-kategori="alle">Alle kurser</button>
             </div>
             <div id="tema1" class="buttonContainer">
-                
+            <img src="https://xn--mflingo-q1a.dk/kea/ungdomsbyen/wp-content/uploads/2021/11/konflikt.png" alt="">
                 <button id="filterknap" class="" data-kategori="Konflikthåndtering">Konflikthåndtering</button>
             </div>
             <div id="tema2" class="buttonContainer">
-             
+            <img src="https://xn--mflingo-q1a.dk/kea/ungdomsbyen/wp-content/uploads/2021/11/konflikt.png" alt="">
                 <button id="filterknap" class="" data-kategori="Fn's 17 verdensmål">Fn's 17 verdensmål</button>
             </div>
             <div id="tema3" class="buttonContainer">
+            <img src="https://xn--mflingo-q1a.dk/kea/ungdomsbyen/wp-content/uploads/2021/11/konflikt.png" alt="">
                 <button id="filterknap" class="" data-kategori="Økonomi">Økonomi</button>
             </div>
             <div id="tema3" class="buttonContainer">
+            <img src="https://xn--mflingo-q1a.dk/kea/ungdomsbyen/wp-content/uploads/2021/11/konflikt.png" alt="">
                 <button id="filterknap" class="" data-kategori="Demokrati og Medborgerskab">Demokrati og medborgerskab</button>
             </div>
 			</div>
