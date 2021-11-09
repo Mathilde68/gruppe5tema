@@ -38,29 +38,31 @@ Gennem samarbejdet med lærere og skoleledere i hele uddannelsessektoren har vi 
 <p> <span><button class="kontaktOs">Kontakt os</button></span> og bliv en del af Ungdomsbyens netværk </p>
 
 </div>
+<template>
+
+<article class="kurset">
+<h3 class="navn"></h3>
+	<img src="" alt="">
+	<div>
+	<p class="kortbeskrivelse"></p>
+	<p class="pris"></p>
+	<button class="seMere">Læs mere</button>
+	</div>
+</article>
+</template>
+
+
 </section>
 	<nav class="filter_section">
         <button data-kategori= "alle" class="valgt">Alle</button>
         <button data-kategori= "Fn´s 17 verdensmål">FN´s 17 verdensmål</button>
         <button data-kategori = "LGBTQ+ og normer">LGBTQ+ og normer</button>
         <button data-kategori= "Demokrati og medborgerskab">Demokrati og medborgerskab</button>
-    </nav>
-	<section id="oversigt"></section>		
+    </nav>		
 
+	<section id="oversigt"></section>
 		</main><!-- #main -->
-		
-		<template>
 
-		<article class="kurset">
-		<h3 class="navn"></h3>
-            <img src="" alt="">
-            <div>
-            <p class="kortbeskrivelse"></p>
-            <p class="pris"></p>
-			<button class="seMere">Læs mere</button>
-            </div>
-        </article>
-    </template>
 
 <style>
 	 
@@ -93,7 +95,7 @@ let filter = "alle";
 
 		   	//const for destinationen af indholdet og templaten
 			   const destination = document.querySelector("#oversigt");
-            let kursusTemplate = document.querySelector("template");
+            let template = document.querySelector("template");
 
 	  // asynkron function som afventer og indhenter json data fra restdb
 	  async function hentData() {
@@ -118,7 +120,7 @@ function filtrerKurser (){
 		  
 		  kurser.forEach(kursus => {
 			  if(filter == kursus.tema || filter == "alle"){ 
-			   const klon = kursusTemplate.cloneNode(true).content;
+			   const klon = template.cloneNode(true).content;
 			   klon.querySelector(".navn").textContent = kursus.navn;
                 klon.querySelector("img").src = kursus.billede.guid;
                 klon.querySelector(".kortbeskrivelse").textContent = kursus.kort_beskrivelse;
