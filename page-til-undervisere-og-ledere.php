@@ -92,7 +92,7 @@ let filterKnapper = document.querySelectorAll("nav button");
 filterKnapper.forEach(knap => knap.addEventListener("click", filtrerKurser));
 
 function filtrerKurser (){
-	filter = this.dataset.tema;
+	filter = this.dataset.kategori;
 	document.querySelector(".valgt").classList.remove("valgt");
     this.classList.add("valgt");
 	visKurser();
