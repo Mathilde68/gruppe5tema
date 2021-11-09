@@ -1,12 +1,13 @@
 <?php
 
 
+
 get_header();
 ?>
 
 <style>
     
-/* .kortbeskrivelse {
+ .kortbeskrivelse {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
     padding-left: 20px;
@@ -17,7 +18,7 @@ get_header();
     grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
     padding-left: 20px;
     
-} */
+} 
 
 .infoboks {
     display: grid; 
