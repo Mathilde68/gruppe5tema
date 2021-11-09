@@ -14,43 +14,39 @@ get_header();
 <article class="kurset">
 <h3 class="navn"></h3>
 	<img src="" alt="">
+	<div>
 	<p class="kortbeskrivelse"></p>
 	<p class="pris"></p>
 	<button class="seMere">Læs mere</button>
+	</div>
 </article>
 </template>
 
 
-	<main id="main" class="site-main"></main><!-- #main -->
+	<main id="main" class="site-main">
 
-	
 
-	<h2>Kursus til undervisere og ledere</h2>
+	<?php
 
-<h3>Undervisning i bæredygtighed og ligestilling</h3>
+// Start the Loop.
+while ( have_posts() ) :
+    the_post();
 
-	<section class="beskrivelse"> 
+    get_template_part( 'template-parts/content/content', 'page' );
 
-		<div class="beskrivelse_one"> 
+    // If comments are open or we have at least one comment, load up the comment template.
+    if ( comments_open() || get_comments_number() ) {
+        comments_template();
+    }
 
-	<p>Hvornår indgår Verdensmålene i lærerens, pædagogens og TAP’ernes professionelle arbejde?
-Hvor er elevrådene inkluderet i skolens demokrati? Hvad er strategien for antiradikalisering?
-Hvordan håndterer skolen inklusion af minoriteter, herunder LGBT-elever, -medarbejdere og -familier i skole-hjem-samarbejdet?
+endwhile; // End the loop.
+?>
 
-Alle disse spørgsmål har Ungdomsbyen faglige bud på. I takt med samfundets udvikling tilbyder vi en tidssvarende kapacitetsopbygning, som styrker elevernes demokratiske dannelse, og lader skolens normer, udsyn og kultur fremstå vidende og åben for omverdenen.</p>
-</div>
 
-<div class="beskrivelse_two"> 
 
-<p>Ungdomsbyens kurser henvender sig til uddannelsessektorens ledere, fagfolk og undervisere, der vægter elevernes dannelse og forståelse af, hvad et globalt medborgerskab indebærer.
 
-Gennem samarbejdet med lærere og skoleledere i hele uddannelsessektoren har vi fingeren på pulsen og mange års erfaring med kurser og udviklingsforløb, der understøtter en fælles og bæredygtig fremtid.</p>
+	</main><!-- #main -->
 
-<p> <span><button class="kontaktOs">Kontakt os</button></span> og bliv en del af Ungdomsbyens netværk </p>
-
-</div>
-
-</section>	
 <nav>
         <button data-kategori= "alle" class="valgt">Alle</button>
         <button data-kategori="Fn's 17 verdensmål">Fn's 17 verdensmål</button>
@@ -60,7 +56,6 @@ Gennem samarbejdet med lærere og skoleledere i hele uddannelsessektoren har vi 
 	
 </section><!-- #section -->	
 
-	</section>
 	
 	<section id="oversigt">	</section>
 

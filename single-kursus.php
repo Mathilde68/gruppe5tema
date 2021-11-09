@@ -5,7 +5,81 @@
 get_header();
 ?>
 
+<style>
+    
+ .kortbeskrivelse {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+    padding-left: 20px;
+    
+}
+.langbeskrivelse {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+    padding-left: 20px;
+    
+} 
 
+.infoboks {
+    display: grid; 
+    grid-template-columns: 1fr, 1fr;
+}
+
+
+
+.navn {
+    padding-left: 20px;
+
+}
+
+img {
+    width: 100%;
+    height: 100%; 
+    padding-left: 20px;
+
+}
+
+
+.pris {
+    padding-left: 20px;  
+}
+
+.laengde {
+    padding-left: 20px;  
+}
+
+
+.antal_deltagere {
+    padding-left: 20px; 
+}
+
+.underoverskrift1 {
+    padding-left: 20px;
+
+}
+.yderligereinfo_1 {
+    padding-left: 20px;
+}
+
+.underoverskrift2 {
+    padding-left: 20px;
+}
+
+.yderligereinfo_2 {
+    padding-left: 20px;
+}
+
+.klassetrin {
+    padding-left: 20px;
+}
+
+.infoboks {
+
+}
+
+
+
+    </style>
 
 
 
@@ -17,20 +91,18 @@ get_header();
             
             <div>
 			
-            <div id="infoboks1"> 
+            <div class="infoboks"> 
                   <h2 class="navn"></h2>
             <p class="kortbeskrivelse"></p>
             <p class="langbeskrivelse"></p>
  
-			</div>
-
-            <div id="infoboks2">
+			
             <p class="pris"></p>
             <p class="laengde"></p>
             <p class="antal_deltagere"></p>
             <p class="klassetrin"></p> 
-            </div>
         
+        </div>
             <img class="billede" src="" alt="">
             <h3 class="underoverskrift1"></h3>
             <p class="yderligereinfo_1"></p>
