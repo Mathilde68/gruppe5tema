@@ -9,7 +9,6 @@ get_header();
 ?>
 
 <template>
-
 <article class="kurset">
 <h3 class="navn"></h3>
 	<img src="" alt="">
@@ -72,11 +71,8 @@ Gennem samarbejdet med lærere og skoleledere i hele uddannelsessektoren har vi 
 .beskrivelse { 
 display: grid;
   grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-  row-gap: 20px;
-  column-gap: 40px;
-  padding: 2rem;
   margin: auto;
-  max-width: 1700px;
+  max-width: 1100px;
 }	
 
 
