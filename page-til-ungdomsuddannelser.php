@@ -48,29 +48,6 @@ get_header();
 </template>
 
 
-<nav class="filter_section">
-
-	<div id="alle" class="buttonContainer">
-		<img src="https://xn--mflingo-q1a.dk/kea/ungdomsbyen/wp-content/uploads/2021/11/konflikt.png" alt="">
-		<button id="filterknap" class="valgt" data-kategori="alle">Alle kurser</button>
-	</div>
-
-	<div id="tema1" class="buttonContainer">
-		<img src="https://xn--mflingo-q1a.dk/kea/ungdomsbyen/wp-content/uploads/2021/11/konflikt.png" alt="">
-		<button id="filterknap" class="" data-kategori="Konflikthåndtering">Konflikthåndtering</button>
-	</div>
-
-	<div id="tema2" class="buttonContainer">
-		<img src="https://xn--mflingo-q1a.dk/kea/ungdomsbyen/wp-content/uploads/2021/11/konflikt.png" alt="">
-		<button id="filterknap" class="" data-kategori="Fn's 17 verdensmål">Fn's 17 verdensmål</button>
-	</div>
-
-	<div id="tema3" class="buttonContainer">
-		<img src="https://xn--mflingo-q1a.dk/kea/ungdomsbyen/wp-content/uploads/2021/11/oekonomi.png" alt="">
-		<button id="filterknap" class="" data-kategori="Økonomi">Økonomi</button>
-	</div>
-
-</nav>
 
 	<main id="main" class="site-main">
 
@@ -91,6 +68,35 @@ endwhile; // End the loop.
 ?>
 
 
+<nav class="filter_section2">
+
+	<div id="alle" class="buttonContainer2">
+		
+	<button id="filterknap" class="uu valgt" data-kategori="alle">Alle kurser</button>
+		<img src="https://xn--mflingo-q1a.dk/kea/ungdomsbyen/wp-content/uploads/2021/11/konflikt.png" alt="">
+	
+	</div>
+
+	<div id="tema1" class="buttonContainer2">
+	<button id="filterknap" class="uu" data-kategori="Konflikthåndtering">Konflikthåndtering</button>
+		<img src="https://xn--mflingo-q1a.dk/kea/ungdomsbyen/wp-content/uploads/2021/11/konflikt.png" alt="">
+	
+	</div>
+
+	<div id="tema2" class="buttonContainer2">
+	<button id="filterknap" class="uu" data-kategori="Fn's 17 verdensmål">Fn's 17 verdensmål</button>
+	<img src="https://xn--mflingo-q1a.dk/kea/ungdomsbyen/wp-content/uploads/2021/11/konflikt.png" alt="">
+	</div>
+		
+		
+
+	<div id="tema3" class="buttonContainer2">
+	<button id="filterknap" class="uu" data-kategori="Økonomi">Økonomi</button>
+		<img src="https://xn--mflingo-q1a.dk/kea/ungdomsbyen/wp-content/uploads/2021/11/oekonomi.png" alt="">
+		
+	</div>
+
+</nav>
 			<h2 id="overskrift">Kurser til ungdomsuddanelser</h2>
 			<section id="oversigt"></section>
 
@@ -168,7 +174,6 @@ let nyOverskrift = document.querySelector("#overskrift");
 		   //fjerner oog tilføjer valgt class til den rigtige knap
 
 		   document.querySelector(".valgt").classList.remove("valgt");
-
             this.classList.add("valgt");
 
 
