@@ -24,7 +24,29 @@ get_header();
 
 	<section id="section" class="content-area">
 
-	<h2>Vælg imellem vores temaer</h2>
+
+	<template>
+
+<article class="kurset">
+
+<h4 class="navn"></h4>
+
+	<img src="" alt="">
+
+	<div>
+
+	<p class="kortbeskrivelse"></p>
+
+	<p class="pris"></p>
+
+	<button class="seMere">Læs mere</button>
+
+	</div>
+
+</article>
+
+</template>
+
 
 <nav class="filter_section">
 
@@ -52,35 +74,29 @@ get_header();
 
 	<main id="main" class="site-main">
 
+	<?php
+
+// Start the Loop.
+while ( have_posts() ) :
+    the_post();
+
+    get_template_part( 'template-parts/content/content', 'page' );
+
+    // If comments are open or we have at least one comment, load up the comment template.
+    if ( comments_open() || get_comments_number() ) {
+        comments_template();
+    }
+
+endwhile; // End the loop.
+?>
+
+
 			<h2 id="overskrift">Kurser til ungdomsuddanelser</h2>
 			<section id="oversigt"></section>
 
 		</main><!-- #main -->
 
 		
-
-		<template>
-
-		<article class="kurset">
-
-		<h4 class="navn"></h4>
-
-            <img src="" alt="">
-
-            <div>
-
-            <p class="kortbeskrivelse"></p>
-
-            <p class="pris"></p>
-
-			<button class="seMere">Læs mere</button>
-
-            </div>
-
-        </article>
-
-    </template>
-
 
 
 		

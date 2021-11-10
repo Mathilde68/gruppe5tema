@@ -37,7 +37,6 @@ endwhile; // End the loop.
 	<section id="intro">
 	<div class="introboks"><p class="introtekst">Undervisning i uddannelsesvalg, demokratisk dannelse og FN’s verdensmålHvordan udbreder kommunen sine vigtige budskaber om demokrati og erhvervsuddannelser til grundskolerne og ungdomsuddannelserne? Hvordan bruger kommunen FN’s verdensmål, som kompas for en bæredygtig fremtid?</p>
 		</div>
-		<h2>Vælg imellem vores temaer</h2>
 		<div class="filter_section">
             <div id="alle" class="buttonContainer">
                 <img src="https://xn--mflingo-q1a.dk/kea/ungdomsbyen/wp-content/uploads/2021/11/konflikt.png" alt="">
