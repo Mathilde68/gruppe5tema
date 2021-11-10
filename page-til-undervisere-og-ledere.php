@@ -7,7 +7,26 @@
 get_header();
 
 ?>
+<style>
+	.ul{
+		background-color: #87A2FF;
+	}
 
+	.overskrift_ul{
+    color: #406BFF;
+    font-family: "Helvetica", Sans-serif;
+    font-size: 2rem;
+    font-weight: 600;
+    line-height: 54px;
+
+}
+
+.content-area{
+	margin:auto;
+	max-width:1500px;
+}
+
+</style>
 <section id="section" class="content-area">
 
 <template>
@@ -45,26 +64,50 @@ endwhile; // End the loop.
 
 
 
-	</main><!-- #main -->
 
-<nav>
-        <button data-kategori= "alle" class="valgt">Alle</button>
-        <button data-kategori="Fn's 17 verdensmål">Fn's 17 verdensmål</button>
-        <button data-kategori = "LGBTQ+ og normer">LGBTQ+ og normer</button>
-        <button data-kategori= "Demokrati og medborgerskab">Demokrati og medborgerskab</button>
-    </nav>
-	
-</section><!-- #section -->	
+	<nav class="filter_section2">
 
+	<div id="alle" class="buttonContainer2">
+		
+	<button id="filterknap" class="ul valgt" data-kategori="alle">Alle kurser</button>
+		<img src="https://xn--mflingo-q1a.dk/kea/ungdomsbyen/wp-content/uploads/2021/11/konflikt.png" alt="">
 	
-	<section id="oversigt">	</section>
+	</div>
+
+	<div id="tema1" class="buttonContainer2">
+	<button id="filterknap" class="ul" data-kategori="LGBTQ+ og normer">LGBTQ+ og normer</button>
+		<img src="https://xn--mflingo-q1a.dk/kea/ungdomsbyen/wp-content/uploads/2021/11/konflikt.png" alt="">
+	
+	</div>
+
+	<div id="tema2" class="buttonContainer2">
+	<button id="filterknap" class="ul" data-kategori="Fn's 17 verdensmål">Fn's 17 verdensmål</button>
+	<img src="https://xn--mflingo-q1a.dk/kea/ungdomsbyen/wp-content/uploads/2021/11/konflikt.png" alt="">
+	</div>
+		
+		
+
+	<div id="tema3" class="buttonContainer2">
+	<button id="filterknap" class="ul" data-kategori="Demokrati og medborgerskab">Demokrati og Medborgerskab</button>
+		<img src="https://xn--mflingo-q1a.dk/kea/ungdomsbyen/wp-content/uploads/2021/11/oekonomi.png" alt="">
+		
+	</div>
+
+</nav>
+
+<h2 id="overskrift" class="overskrift_ul">Kurser til undervisere og ledere</h2>
+<section id="oversigt">	</section>
+</main><!-- #main -->
+</section><!-- #section -->
+
+
 
 <script>
 
 let kurser;
 //filtrer knap, her defineres der filtreringsknapper og laver click event
 let filter = "alle";
-
+let nyOverskrift = document.querySelector("#overskrift");
  
 	  //url til wp restapi db - læg mærke til den her kun indhenter data med kategori 7 (numreringen på til undervisere og ledere kategorien)
 	  const url = "https://xn--mflingo-q1a.dk/kea/ungdomsbyen/wp-json/wp/v2/kursus?categories=7";
@@ -81,11 +124,15 @@ let filter = "alle";
 		  visKurser();
 	  }
 
-let filterKnapper = document.querySelectorAll("nav button");
+let filterKnapper = document.querySelectorAll("#filterknap");
 filterKnapper.forEach(knap => knap.addEventListener("click", filtrerKurser));
 
 function filtrerKurser (){
 	filter = this.dataset.kategori;
+
+	  //ændrer overskriften
+	  nyOverskrift.textContent = this.textContent + " til undervisere og ledere";
+
 	document.querySelector(".valgt").classList.remove("valgt");
     this.classList.add("valgt");
 	visKurser();
