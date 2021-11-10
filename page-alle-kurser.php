@@ -13,23 +13,8 @@ get_header();
 
 	<section id="section" class="content-area">
 
-	<?php
 
-// Start the Loop.
-while ( have_posts() ) :
-the_post();
 
-get_template_part( 'template-parts/content/content', 'page' );
-
-// If comments are open or we have at least one comment, load up the comment template.
-if ( comments_open() || get_comments_number() ) {
-	comments_template();
-}
-
-endwhile; // End the loop.
-?>
-
-	<h2>Vælg imellem vores temaer</h2>
 
 <nav class="filter_section2">
 
@@ -78,6 +63,25 @@ endwhile; // End the loop.
 </nav>
 
 		<main id="main" class="site-main">
+
+		<?php
+
+// Start the Loop.
+while ( have_posts() ) :
+the_post();
+
+get_template_part( 'template-parts/content/content', 'page' );
+
+// If comments are open or we have at least one comment, load up the comment template.
+if ( comments_open() || get_comments_number() ) {
+	comments_template();
+}
+
+endwhile; // End the loop.
+?>
+
+
+
 		<h2 id="overskrift">Alle kurser</h2>
 			<section id="oversigt"></section>
 		</main><!-- #main -->
