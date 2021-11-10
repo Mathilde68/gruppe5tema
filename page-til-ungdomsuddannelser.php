@@ -105,7 +105,7 @@ endwhile; // End the loop.
 		
 
 
-		
+		</section><!-- #section -->
 
 <script>let kurser;
 
@@ -226,7 +226,7 @@ let nyOverskrift = document.querySelector("#overskrift");
 
 
 
-	</section><!-- #section -->
+	
 
 
 
