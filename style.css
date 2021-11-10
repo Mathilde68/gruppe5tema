@@ -3,7 +3,7 @@ Theme Name: Child Theme 1
 Template: twentynineteen
 Author: Rosa Sahlholt
 Description: Stylish Child Theme based on Twenty Nineteen
-Version: 1.3.9.7
+Version: 1.3.9.9
 */
 img {
   width: 100%;
@@ -142,20 +142,17 @@ input[type="submit"]:focus {
 
 .filter_section2 {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(310px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
   align-content: center;
   justify-content: center;
   row-gap: 20px;
   column-gap: 40px;
   padding: 3rem;
   margin: auto;
-  max-width: 1500px;
+  max-width: 1600px;
 }
 
-/* button colors for different pages*/
-.uu{
- background-color: #72BA86;
-}
+
 
 
 #oversigt {

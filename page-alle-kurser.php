@@ -7,48 +7,82 @@
 get_header();
 
 ?>
-
-
+ <style>
+.filter_section2 {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  align-content: center;
+  justify-content: center;
+  row-gap: 20px;
+  column-gap: 40px;
+  padding: 1rem;
+  margin: auto;
+  max-width: 1550px;
+}
+</style>
 
 	<section id="section" class="content-area">
 
+	<?php
+
+// Start the Loop.
+while ( have_posts() ) :
+the_post();
+
+get_template_part( 'template-parts/content/content', 'page' );
+
+// If comments are open or we have at least one comment, load up the comment template.
+if ( comments_open() || get_comments_number() ) {
+	comments_template();
+}
+
+endwhile; // End the loop.
+?>
+
 	<h2>Vælg imellem vores temaer</h2>
 
-<nav class="filter_section">
+<nav class="filter_section2">
 
-<div id="alle" class="buttonContainer">
-		<img src="https://xn--mflingo-q1a.dk/kea/ungdomsbyen/wp-content/uploads/2021/11/konflikt.png" alt="">
+<div id="alle" class="buttonContainer2">
 		<button id="filterknap" class="valgt" data-kategori="alle">Alle Kurser</button>
+		<img src="https://xn--mflingo-q1a.dk/kea/ungdomsbyen/wp-content/uploads/2021/11/konflikt.png" alt="">
+		
 	</div>
 
-	<div id="tema1" class="buttonContainer">
-		<img src="https://xn--mflingo-q1a.dk/kea/ungdomsbyen/wp-content/uploads/2021/11/konflikt.png" alt="">
+	<div id="tema1" class="buttonContainer2">
 		<button id="filterknap" class="" data-kategori="Konflikthåndtering">Konflikthåndtering</button>
-	</div>
-
-	<div id="tema2" class="buttonContainer">
 		<img src="https://xn--mflingo-q1a.dk/kea/ungdomsbyen/wp-content/uploads/2021/11/konflikt.png" alt="">
-		<button id="filterknap" class="" data-kategori="Fn's 17 verdensmål">Fn's 17 verdensmål</button>
+		
 	</div>
 
-	<div id="tema3" class="buttonContainer">
+	<div id="tema2" class="buttonContainer2">
+	<button id="filterknap" class="" data-kategori="Fn's 17 verdensmål">Fn's 17 verdensmål</button>
+		<img src="https://xn--mflingo-q1a.dk/kea/ungdomsbyen/wp-content/uploads/2021/11/konflikt.png" alt="">
+		
+	</div>
+
+	<div id="tema3" class="buttonContainer2">
+	<button id="filterknap" class="" data-kategori="Økonomi">Økonomi</button>
 		<img src="https://xn--mflingo-q1a.dk/kea/ungdomsbyen/wp-content/uploads/2021/11/oekonomi.png" alt="">
-		<button id="filterknap" class="" data-kategori="Økonomi">Økonomi</button>
+		
 	</div>
 
-	<div id="tema4" class="buttonContainer">
+	<div id="tema4" class="buttonContainer2">
+	<button id="filterknap" class="" data-kategori="Uddannelsesvalg">Uddannelsesvalg</button>
 		<img src="https://xn--mflingo-q1a.dk/kea/ungdomsbyen/wp-content/uploads/2021/11/uddanelsesvalg.png" alt="">
-		<button id="filterknap" class="" data-kategori="Uddannelsesvalg">Uddannelsesvalg</button>
+		
 	</div>
 
-	<div id="tema5" class="buttonContainer">
+	<div id="tema5" class="buttonContainer2">
+	<button id="filterknap" class="" data-kategori="LGBTQ+ og normer">LGBTQ+ og normer</button>
 		<img src="https://xn--mflingo-q1a.dk/kea/ungdomsbyen/wp-content/uploads/2021/11/uddanelsesvalg.png" alt="">
-		<button id="filterknap" class="" data-kategori="LGBTQ+ og normer">LGBTQ+ og normer</button>
+	
 	</div>
 
-	<div id="tema6" class="buttonContainer">
+	<div id="tema6" class="buttonContainer2">
+	<button id="filterknap" class="" data-kategori="Demokrati og medborgerskab">Demokrati og Medborgerskab</button>
 		<img src="https://xn--mflingo-q1a.dk/kea/ungdomsbyen/wp-content/uploads/2021/11/uddanelsesvalg.png" alt="">
-		<button id="filterknap" class="" data-kategori="Demokrati og medborgerskab">Demokrati og Medborgerskab</button>
+	
 	</div>
 
 </nav>
@@ -64,7 +98,7 @@ get_header();
             <img src="" alt="">
             <div>
             <p class="kortbeskrivelse"></p>
-            <p class="pris"></p>
+            <p class="kategori"></p>
 			<button class="seMere">Læs mere</button>
             </div>
         </article>
@@ -125,8 +159,8 @@ if (filter == kursus.tema || filter == "alle" ) {
 const klon = template.cloneNode(true).content;
 klon.querySelector(".navn").textContent = kursus.navn;
 klon.querySelector("img").src = kursus.billede.guid;
+klon.querySelector(".kategori").textContent = kursus.kategori;
 klon.querySelector(".kortbeskrivelse").textContent = kursus.kort_beskrivelse;
-klon.querySelector(".pris").textContent = "Pris: "+ kursus.pris;
 klon.querySelector(".seMere").addEventListener("click", () => location.href=kursus.link);
 
 
