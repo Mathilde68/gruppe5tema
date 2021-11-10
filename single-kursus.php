@@ -1,86 +1,61 @@
+
+
+
+
 <?php
 
+ 
 
 
 get_header();
 ?>
 
 <style>
-    
- .kortbeskrivelse {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
-    padding-left: 20px;
-    
-}
-.langbeskrivelse {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
-    padding-left: 20px;
-    
-} 
 
-.infoboks {
+.kurset_section {
     display: grid; 
-    grid-template-columns: 1fr, 1fr;
+    grid-template-columns: 1fr 1fr;
+    padding: 20px;
+    
 }
 
-
-
-.navn {
-    padding-left: 20px;
-
+.infoboks1 {
+    grid-column: 1/2;
 }
 
-img {
-    width: 100%;
-    height: 100%; 
-    padding-left: 20px;
-
+.infoboks2 {
+    grid-column: 3/4;
+    
+    margin-top: 20px;
 }
 
+#farveboks {
+    background-color: lightblue;
 
+}
 .pris {
-    padding-left: 20px;  
+    padding: 10px;
 }
 
 .laengde {
-    padding-left: 20px;  
+    padding: 10px;
 }
 
 
 .antal_deltagere {
-    padding-left: 20px; 
+    padding: 10px;
 }
 
-.underoverskrift1 {
-    padding-left: 20px;
-
-}
-.yderligereinfo_1 {
-    padding-left: 20px;
-}
-
-.underoverskrift2 {
-    padding-left: 20px;
-}
-
-.yderligereinfo_2 {
-    padding-left: 20px;
-}
 
 .klassetrin {
-    padding-left: 20px;
-}
-
-.infoboks {
-
+    padding: 10px;
 }
 
 
 
-    </style>
 
+
+</style>
 
 
 
@@ -89,26 +64,29 @@ img {
 
  <article class="kurset">
             
-            <div>
+       <section class="kurset_section">   
 			
-            <div class="infoboks"> 
+            <div class="infoboks1"> 
                   <h2 class="navn"></h2>
             <p class="kortbeskrivelse"></p>
             <p class="langbeskrivelse"></p>
  
-			
+			</div>
+
+            <div class="infoboks2">
+                <div id="farveboks">
             <p class="pris"></p>
             <p class="laengde"></p>
             <p class="antal_deltagere"></p>
-            <p class="klassetrin"></p> 
+            <p class="klassetrin"></p> </div>
+            </div> </section> 
         
-        </div>
             <img class="billede" src="" alt="">
             <h3 class="underoverskrift1"></h3>
             <p class="yderligereinfo_1"></p>
             <h4 class="underoverskrift2"></h4>
             <p class="yderligereinfo_2"></p>
-            </div>
+           
         </article>
 
 
