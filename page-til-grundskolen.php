@@ -23,11 +23,6 @@ get_header();
     color: #D56FEF;
 }
 
-.content-area{
-	margin:auto;
-	max-width:1500px;
-}
-
 
 
 </style>

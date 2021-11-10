@@ -17,10 +17,6 @@ get_header();
     color: #2A2D6C;
 }
 
-.content-area{
-	margin:auto;
-	max-width:1500px;
-}
 
 </style>
 

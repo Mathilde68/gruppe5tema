@@ -14,12 +14,9 @@ get_header();
 
 	.overskrift_ul{
     color: #406BFF;
+
 }
 
-.content-area{
-	margin:auto;
-	max-width:1500px;
-}
 
 </style>
 <section id="section" class="content-area">

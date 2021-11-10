@@ -18,11 +18,6 @@ get_header();
     color: #FF4A69;
 }
 
-.content-area{
-	margin:auto;
-	max-width:1500px;
-}
-
 
 
 </style>

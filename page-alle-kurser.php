@@ -8,17 +8,7 @@ get_header();
 
 ?>
  <style>
-.filter_section2 {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
-  align-content: center;
-  justify-content: center;
-  row-gap: 20px;
-  column-gap: 40px;
-  padding: 1rem;
-  margin: auto;
-  max-width: 1550px;
-}
+
 </style>
 
 	<section id="section" class="content-area">
