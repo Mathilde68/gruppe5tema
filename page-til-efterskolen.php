@@ -26,9 +26,8 @@ get_header();
     </template>
 
 		<main id="main" class="site-main">
-		<section id="oversigt"></section>
-		</main><!-- #main -->
-		
+
+
 		<?php
 
 // Start the Loop.
@@ -44,6 +43,14 @@ while ( have_posts() ) :
 
 endwhile; // End the loop.
 ?>
+	
+	
+	</main><!-- #main -->
+
+	</section><!-- #section -->	
+
+	<section id="oversigt"></section>
+		
 
 
 <script>let kurser;
