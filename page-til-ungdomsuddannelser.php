@@ -1,15 +1,6 @@
 <?php
 
 
-
-
-
-
-
-
-
-
-
 get_header();
 
 
@@ -17,7 +8,23 @@ get_header();
 ?>
 
 
+<style>
+	.uu{
+		background-color: #B1DADE;
+	}
 
+	.overskrift_uu{
+    color: #75C0C7;
+}
+
+.content-area{
+	margin:auto;
+	max-width:1500px;
+}
+
+
+
+</style>
 
 
 
@@ -72,7 +79,7 @@ endwhile; // End the loop.
 
 	<div id="alle" class="buttonContainer2">
 		
-	<button id="filterknap" class="uu valgt" data-kategori="alle">Alle kurser</button>
+	<button id="filterknap" class="valgt uu" data-kategori="alle">Alle kurser</button>
 		<img src="https://xn--mflingo-q1a.dk/kea/ungdomsbyen/wp-content/uploads/2021/11/konflikt.png" alt="">
 	
 	</div>
@@ -97,13 +104,10 @@ endwhile; // End the loop.
 	</div>
 
 </nav>
-			<h2 id="overskrift">Kurser til ungdomsuddanelser</h2>
+			<h2 id="overskrift" class="overskrift_uu">Kurser til ungdomsuddanelser</h2>
 			<section id="oversigt"></section>
 
 		</main><!-- #main -->
-
-		
-
 
 		</section><!-- #section -->
 

@@ -9,6 +9,26 @@ get_header();
 ?>
 
 
+<style>
+	.onk{
+		background-color: #FF4A69;
+	}
+
+	.overskrift_onk{
+    color: #FF4A69;
+}
+
+.content-area{
+	margin:auto;
+	max-width:1500px;
+}
+
+
+
+</style>
+
+
+
 
 	<section id="section" class="content-area">
 
@@ -45,38 +65,41 @@ if ( comments_open() || get_comments_number() ) {
 endwhile; // End the loop.
 ?>
 
-</main><!-- #main -->
 
-	<nav class="filter_section">
-	<div id="alle" class="buttonContainer">
+
+	<nav class="filter_section2">
+	<div id="alle" class="buttonContainer2">
+	<button id="filterknap" class="valgt onk" data-kategori="alle">Alle kurser</button>
 <img src="https://xn--mflingo-q1a.dk/kea/ungdomsbyen/wp-content/uploads/2021/11/konflikt.png" alt="">
-<button id="filterknap" class="valgt" data-kategori="alle">Alle kurser</button>
+
 </div>
 
-<div id="tema1" class="buttonContainer">
+<div id="tema1" class="buttonContainer2">
+<button id="filterknap" class="onk" data-kategori="Konflikthåndtering">Konflikthåndtering</button>
 <img src="https://xn--mflingo-q1a.dk/kea/ungdomsbyen/wp-content/uploads/2021/11/konflikt.png" alt="">
-<button id="filterknap" class="" data-kategori="Konflikthåndtering">Konflikthåndtering</button>
+
 </div>
 
-<div id="tema2" class="buttonContainer">
+<div id="tema2" class="buttonContainer2">
+<button id="filterknap" class="onk" data-kategori="Fn's 17 verdensmål">Fn's 17 verdensmål</button>
 <img src="https://xn--mflingo-q1a.dk/kea/ungdomsbyen/wp-content/uploads/2021/11/konflikt.png" alt="">
-<button id="filterknap" class="" data-kategori="Fn's 17 verdensmål">Fn's 17 verdensmål</button>
+
 </div>
 
-<div id="tema3" class="buttonContainer">
+<div id="tema3" class="buttonContainer2">
+<button id="filterknap" class="onk" data-kategori="LGBTQ+ og normer">LGBTQ+ og normer</button>
 <img src="https://xn--mflingo-q1a.dk/kea/ungdomsbyen/wp-content/uploads/2021/11/konflikt.png" alt="">
-<button id="filterknap" class="" data-kategori="LGBTQ+ og normer">LGBTQ+ og normer</button>
+
 </div>
            
 </nav>
 
 
 	
-<h2 id="overskrift">Online kurser</h2>
-			
+<h2 id="overskrift" class="overskrift-onk">Online kurser</h2>
 <section id="oversigt"></section>
-
-</section>
+</main><!-- #main -->
+</section><!-- #section -->
 	
 		
 		
@@ -164,7 +187,7 @@ if (filter == kursus.tema || filter == "alle") {
 
 </script>
 
-	</section><!-- #section -->
+
 
 
 <?php

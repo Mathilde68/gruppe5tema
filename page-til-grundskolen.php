@@ -13,9 +13,24 @@
 get_header();
 
 
-
 ?>
+<style>
+	.gs{
+		background-color: #D56FEF;
+	}
 
+	.overskrift_gs{
+    color: #D56FEF;
+}
+
+.content-area{
+	margin:auto;
+	max-width:1500px;
+}
+
+
+
+</style>
 
 
 <template> 
@@ -68,65 +83,57 @@ endwhile; // End the loop.
 
 
 
-        <div class="filter_section">
+    <nav class="filter_section2">
 
-        <div id="alle" class="buttonContainer">
+        <div id="alle" class="buttonContainer2">
+            <button id="filterknap" class="gs valgt-gs" data-kategori="alle">Alle kurser</button>
+            <img src="https://xn--mflingo-q1a.dk/kea/ungdomsbyen/wp-content/uploads/2021/11/konflikt.png" alt="">  
+        </div>
 
-        <img src="https://xn--mflingo-q1a.dk/kea/ungdomsbyen/wp-content/uploads/2021/11/konflikt.png" alt="">
-
-                <button id="filterknap" class="valgt" data-kategori="alle">Alle kurser</button>
-
-            </div>
-
-            <div id="tema1" class="buttonContainer">
-
+            <div id="tema1" class="buttonContainer2">
+            <button id="filterknap" class="gs" data-kategori="Konflikthåndtering">Konflikthåndtering</button>
             <img src="https://xn--mflingo-q1a.dk/kea/ungdomsbyen/wp-content/uploads/2021/11/konflikt.png" alt="">
 
-                <button id="filterknap" class="" data-kategori="Konflikthåndtering">Konflikthåndtering</button>
+               
 
             </div>
 
-            <div id="tema2" class="buttonContainer">
-
+            <div id="tema2" class="buttonContainer2">
+            <button id="filterknap" class="gs" data-kategori="Fn's 17 verdensmål">Fn's 17 verdensmål</button>
             <img src="https://xn--mflingo-q1a.dk/kea/ungdomsbyen/wp-content/uploads/2021/11/konflikt.png" alt="">
 
-                <button id="filterknap" class="" data-kategori="Fn's 17 verdensmål">Fn's 17 verdensmål</button>
+             
 
             </div>
 
-            <div id="tema3" class="buttonContainer">
-
+            <div id="tema3" class="buttonContainer2">
+            <button id="filterknap" class="gs" data-kategori="Økonomi">Økonomi</button>
             <img src="https://xn--mflingo-q1a.dk/kea/ungdomsbyen/wp-content/uploads/2021/11/oekonomi.png" alt="">
 
-                <button id="filterknap" class="" data-kategori="Økonomi">Økonomi</button>
+              
 
             </div>
 
-            <div id="tema3" class="buttonContainer">
-
+            <div id="tema3" class="buttonContainer2">
+            <button id="filterknap" class="gs" data-kategori="Demokrati og Medborgerskab">Demokrati og medborgerskab</button>
             <img src="https://xn--mflingo-q1a.dk/kea/ungdomsbyen/wp-content/uploads/2021/11/konflikt.png" alt="">
 
-                <button id="filterknap" class="" data-kategori="Demokrati og Medborgerskab">Demokrati og medborgerskab</button>
+               
 
             </div>
 
-			</div>
+</nav>
 
-            <h2 id="overskrift">Kurser til grundskolenr</h2>
+            <h2 id="overskrift" class="overskrift_gs">Kurser til grundskolen</h2>
 
-</section>
+
 
 <section id="oversigt"></section>
 
 
 
 		</main><!-- #main -->
-
-		
-
-
-
-        </section><!-- #section -->
+   </section><!-- #section -->
 
 
 
@@ -137,14 +144,6 @@ endwhile; // End the loop.
 let nyOverskrift = document.querySelector("#overskrift");
 
 
-
-
-
-
-
-
-
-      
 
 	  //url til wp restapi db - læg mærke til den her kun indhenter data med kategori 3 (numreringen på til grundskole kategorien)
 
@@ -208,9 +207,9 @@ let nyOverskrift = document.querySelector("#overskrift");
 
 		   //fjerner oog tilføjer valgt class til den rigtige knap
 
-		   document.querySelector(".valgt").classList.remove("valgt");
+		   document.querySelector(".valgt-gs").classList.remove("valgt-gs");
 
-            this.classList.add("valgt");
+            this.classList.add("valgt-gs");
 
 
 

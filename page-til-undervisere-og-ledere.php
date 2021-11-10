@@ -14,11 +14,6 @@ get_header();
 
 	.overskrift_ul{
     color: #406BFF;
-    font-family: "Helvetica", Sans-serif;
-    font-size: 2rem;
-    font-weight: 600;
-    line-height: 54px;
-
 }
 
 .content-area{

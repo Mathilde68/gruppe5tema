@@ -8,9 +8,34 @@ get_header();
 
 ?>
 
+<style>
+	.k{
+		background-color: #2A2D6C;
+	}
 
+	.overskrift_k{
+    color: #2A2D6C;
+}
+
+.content-area{
+	margin:auto;
+	max-width:1500px;
+}
+
+</style>
 
 	<section id="section" class="content-area">
+	<template>
+		<article class="kurset">
+		<h4 class="navn"></h4>
+            <img src="" alt="">
+            <div>
+            <p class="kortbeskrivelse"></p>
+            <p class="pris"></p>
+			<button class="seMere">Læs mere</button>
+            </div>
+        </article>
+    </template>
 
 	<main id="main" class="site-main">
 
@@ -32,45 +57,36 @@ endwhile; // End the loop.
 ?>
 
 
+		
+		<nav class="filter_section2">
 
-
-	<section id="intro">
-	<div class="introboks"><p class="introtekst">Undervisning i uddannelsesvalg, demokratisk dannelse og FN’s verdensmålHvordan udbreder kommunen sine vigtige budskaber om demokrati og erhvervsuddannelser til grundskolerne og ungdomsuddannelserne? Hvordan bruger kommunen FN’s verdensmål, som kompas for en bæredygtig fremtid?</p>
-		</div>
-		<div class="filter_section">
-            <div id="alle" class="buttonContainer">
+            <div id="alle" class="buttonContainer2">
+			<button id="filterknap" class="k valgt" data-kategori="alle">Alle kurser</button>
                 <img src="https://xn--mflingo-q1a.dk/kea/ungdomsbyen/wp-content/uploads/2021/11/konflikt.png" alt="">
-                <button id="filterknap" class="valgt" data-kategori="alle">Alle kurser</button>
+               
             </div>
-			<div id="tema1" class="buttonContainer">
+
+			<div id="tema1" class="buttonContainer2">
+			<button id="filterknap" class="k" data-kategori="Uddannelsesvalg">Uddannelsesvalg</button>
                 <img src="https://xn--mflingo-q1a.dk/kea/ungdomsbyen/wp-content/uploads/2021/11/uddanelsesvalg.png" alt="">
-                 <button id="filterknap" class="" data-kategori="Uddannelsesvalg">Uddannelsesvalg</button>
+                
             </div>
-            <div id="tema2" class="buttonContainer">
+
+            <div id="tema2" class="buttonContainer2">
+			<button id="filterknap" class="k" data-kategori="Demokrati og medborgerskab">Demokrati og medborgerskab</button>
                 <img src="https://xn--mflingo-q1a.dk/kea/ungdomsbyen/wp-content/uploads/2021/11/konflikt.png" alt="">
-                <button id="filterknap" class="" data-kategori="Demokrati og medborgerskab">Demokrati og medborgerskab</button>
+             
             </div>
-			</div>
-			<h2 id="overskrift">Kurser til kommunen</h2>
-	</section>
+		</nav>
+
+
+			<h2 id="overskrift" class="overskrift_k">Kurser til kommunen</h2>
+			<section id="oversigt">
 			
 
-			<section id="oversigt">
-
-			</section>
 		</main><!-- #main -->
-		
-		<template>
-		<article class="kurset">
-		<h4 class="navn"></h4>
-            <img src="" alt="">
-            <div>
-            <p class="kortbeskrivelse"></p>
-            <p class="pris"></p>
-			<button class="seMere">Læs mere</button>
-            </div>
-        </article>
-    </template>
+		</section><!-- #section -->
+	
 
 		
 <script>let kurser;
@@ -139,7 +155,7 @@ let nyOverskrift = document.querySelector("#overskrift");
 
 </script>
 
-	</section><!-- #section -->
+	
 
 
 <?php
