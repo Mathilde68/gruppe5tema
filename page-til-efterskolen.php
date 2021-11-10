@@ -12,6 +12,19 @@ get_header();
 
 	<section id="section" class="content-area">
 
+			
+	<template>
+		<article class="kurset">
+		<h3 class="navn"></h3>
+            <img src="" alt="">
+            <div>
+            <p class="kortbeskrivelse"></p>
+            <p class="pris"></p>
+			<button class="seMere">Læs mere</button>
+            </div>
+        </article>
+    </template>
+
 		<main id="main" class="site-main">
 		<section id="oversigt"></section>
 		</main><!-- #main -->
@@ -32,18 +45,6 @@ while ( have_posts() ) :
 endwhile; // End the loop.
 ?>
 
-		
-		<template>
-		<article class="kurset">
-		<h3 class="navn"></h3>
-            <img src="" alt="">
-            <div>
-            <p class="kortbeskrivelse"></p>
-            <p class="pris"></p>
-			<button class="seMere">Læs mere</button>
-            </div>
-        </article>
-    </template>
 
 <script>let kurser;
       

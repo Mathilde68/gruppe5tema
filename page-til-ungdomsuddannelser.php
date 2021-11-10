@@ -24,7 +24,29 @@ get_header();
 
 	<section id="section" class="content-area">
 
-	<h2>Vælg imellem vores temaer</h2>
+
+	<template>
+
+<article class="kurset">
+
+<h4 class="navn"></h4>
+
+	<img src="" alt="">
+
+	<div>
+
+	<p class="kortbeskrivelse"></p>
+
+	<p class="pris"></p>
+
+	<button class="seMere">Læs mere</button>
+
+	</div>
+
+</article>
+
+</template>
+
 
 <nav class="filter_section">
 
@@ -75,29 +97,6 @@ endwhile; // End the loop.
 		</main><!-- #main -->
 
 		
-
-		<template>
-
-		<article class="kurset">
-
-		<h4 class="navn"></h4>
-
-            <img src="" alt="">
-
-            <div>
-
-            <p class="kortbeskrivelse"></p>
-
-            <p class="pris"></p>
-
-			<button class="seMere">Læs mere</button>
-
-            </div>
-
-        </article>
-
-    </template>
-
 
 
 		
