@@ -9,14 +9,6 @@ get_header();
 
 
 <style>
-	.uu{
-		background-color: #B1DADE;
-	}
-
-	.overskrift_uu{
-    color: #75C0C7;
-}
-
 
 
 

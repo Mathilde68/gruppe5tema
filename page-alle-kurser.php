@@ -13,7 +13,7 @@ get_header();
 <section id="section" class="content-area">
 
 		<main id="main" class="site-main">
-<section>
+
 		<?php
 
 // Start the Loop.
@@ -29,7 +29,7 @@ if ( comments_open() || get_comments_number() ) {
 
 endwhile; // End the loop.
 ?>
-</section>
+
 <nav class="filter_section2">
 
 <div id="alle" class="buttonContainer2">
@@ -83,7 +83,7 @@ endwhile; // End the loop.
 
 		<template>
 		<article class="kurset">
-		<h3 class="navn"></h3>
+		<h4 class="navn"></h4>
             <img src="" alt="">
             <div>
             <p class="kortbeskrivelse"></p>

@@ -9,13 +9,6 @@ get_header();
 ?>
 
 <style>
-	.k{
-		background-color: #2A2D6C;
-	}
-
-	.overskrift_k{
-    color: #2A2D6C;
-}
 
 
 </style>

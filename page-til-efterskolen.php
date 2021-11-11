@@ -15,7 +15,7 @@ get_header();
 			
 	<template>
 		<article class="kurset">
-		<h3 class="navn"></h3>
+		<h4 class="navn"></h4>
             <img src="" alt="">
             <div>
             <p class="kortbeskrivelse"></p>

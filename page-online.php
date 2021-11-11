@@ -9,19 +9,6 @@ get_header();
 ?>
 
 
-<style>
-	.onk{
-		background-color: #FF4A69;
-	}
-
-	.overskrift_onk{
-    color: #FF4A69;
-}
-
-
-
-</style>
-
 
 
 
@@ -32,7 +19,7 @@ get_header();
 
 	<template>
     	<article class="kurset">
-		<h3 class="navn"></h3>
+		<h4 class="navn"></h4>
             <img src="" alt="">
             <div>
             <p class="kortbeskrivelse"></p>
@@ -60,8 +47,6 @@ if ( comments_open() || get_comments_number() ) {
 endwhile; // End the loop.
 ?>
 
-
-
 	<nav class="filter_section2">
 	<div id="alle" class="buttonContainer2">
 	<button id="filterknap" class="valgt onk" data-kategori="alle">Alle kurser</button>
@@ -88,10 +73,10 @@ endwhile; // End the loop.
 </div>
            
 </nav>
-
+</section>
 
 	
-<h2 id="overskrift" class="overskrift-onk">Online kurser</h2>
+<h2 id="overskrift-onk" class="overskrift-onk">Online kurser</h2>
 <section id="oversigt"></section>
 </main><!-- #main -->
 </section><!-- #section -->
@@ -101,7 +86,7 @@ endwhile; // End the loop.
 <script>let kurser;
 let filter = "alle";
 
-let nyOverskrift = document.querySelector("#overskrift");
+let nyOverskrift = document.querySelector("#overskrift-onk");
       
 	  //url til wp restapi db - læg mærke til den her kun indhenter data med kategori 5 (numreringen på online kategorien)
 	  const url = "https://xn--mflingo-q1a.dk/kea/ungdomsbyen/wp-json/wp/v2/kursus?categories=5";

@@ -7,23 +7,12 @@
 get_header();
 
 ?>
-<style>
-	.ul{
-		background-color: #87A2FF;
-	}
 
-	.overskrift_ul{
-    color: #406BFF;
-
-}
-
-
-</style>
 <section id="section" class="content-area">
 
 <template>
 <article class="kurset">
-<h3 class="navn"></h3>
+<h4 class="navn"></h4>
 	<img src="" alt="">
 	<div>
 	<p class="kortbeskrivelse"></p>
@@ -61,33 +50,33 @@ endwhile; // End the loop.
 
 	<div id="alle" class="buttonContainer2">
 		
-	<button id="filterknap" class="ul valgt" data-kategori="alle">Alle kurser</button>
+	<button id="filterknap" class="uol valgt" data-kategori="alle">Alle kurser</button>
 		<img src="https://xn--mflingo-q1a.dk/kea/ungdomsbyen/wp-content/uploads/2021/11/konflikt.png" alt="">
 	
 	</div>
 
 	<div id="tema1" class="buttonContainer2">
-	<button id="filterknap" class="ul" data-kategori="LGBTQ+ og normer">LGBTQ+ og normer</button>
+	<button id="filterknap" class="uol" data-kategori="LGBTQ+ og normer">LGBTQ+ og normer</button>
 		<img src="https://xn--mflingo-q1a.dk/kea/ungdomsbyen/wp-content/uploads/2021/11/LGBTQ-og-normer.png" alt="">
 	
 	</div>
 
 	<div id="tema2" class="buttonContainer2">
-	<button id="filterknap" class="ul" data-kategori="Fn's 17 verdensmål">Fn's 17 verdensmål</button>
+	<button id="filterknap" class="uol" data-kategori="Fn's 17 verdensmål">Fn's 17 verdensmål</button>
 	<img src="https://xn--mflingo-q1a.dk/kea/ungdomsbyen/wp-content/uploads/2021/11/konflikt.png" alt="">
 	</div>
 		
 		
 
 	<div id="tema3" class="buttonContainer2">
-	<button id="filterknap" class="ul" data-kategori="Demokrati og medborgerskab">Demokrati og Medborgerskab</button>
+	<button id="filterknap" class="uol" data-kategori="Demokrati og medborgerskab">Demokrati og Medborgerskab</button>
 		<img src="https://xn--mflingo-q1a.dk/kea/ungdomsbyen/wp-content/uploads/2021/11/demonkrati-og-medborgerskab.png" alt="">
 		
 	</div>
 
 </nav>
 
-<h2 id="overskrift" class="overskrift_ul">Kurser til undervisere og ledere</h2>
+<h2 id="overskrift" class="overskrift_uol">Kurser til undervisere og ledere</h2>
 <section id="oversigt">	</section>
 </main><!-- #main -->
 </section><!-- #section -->

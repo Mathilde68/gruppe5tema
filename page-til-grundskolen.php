@@ -15,13 +15,6 @@ get_header();
 
 ?>
 <style>
-	.gs{
-		background-color: #D56FEF;
-	}
-
-	.overskrift_gs{
-    color: #D56FEF;
-}
 
 
 
@@ -32,7 +25,7 @@ get_header();
 
 <article class="kurset">
 
-		<h3 class="navn"></h3>
+		<h4 class="navn"></h4>
 
             <img src="" alt="">
 
