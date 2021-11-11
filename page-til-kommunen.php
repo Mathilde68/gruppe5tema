@@ -70,7 +70,7 @@ endwhile; // End the loop.
 
             <div id="tema2" class="buttonContainer2">
 			<button id="filterknap" class="k" data-kategori="Demokrati og medborgerskab">Demokrati og medborgerskab</button>
-                <img src="https://xn--mflingo-q1a.dk/kea/ungdomsbyen/wp-content/uploads/2021/11/konflikt.png" alt="">
+                <img src="https://xn--mflingo-q1a.dk/kea/ungdomsbyen/wp-content/uploads/2021/11/demonkrati-og-medborgerskab.png" alt="">
              
             </div>
 		</nav>

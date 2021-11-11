@@ -13,37 +13,23 @@ get_header();
 <section id="section" class="content-area">
 
 		<main id="main" class="site-main">
+<section>
+		<?php
 
+// Start the Loop.
+while ( have_posts() ) :
+the_post();
 
+get_template_part( 'template-parts/content/content', 'page' );
 
-			<?php
+// If comments are open or we have at least one comment, load up the comment template.
+if ( comments_open() || get_comments_number() ) {
+	comments_template();
+}
 
-			// Start the Loop.
-
-			while ( have_posts() ) :
-
-				the_post();
-
-
-
-				get_template_part( 'template-parts/content/content', 'front' );
-
-
-
-				// If comments are open or we have at least one comment, load up the comment template.
-
-				if ( comments_open() || get_comments_number() ) {
-
-					comments_template();
-
-				}
-
-
-
-			endwhile; // End the loop.
-
-			?>
-
+endwhile; // End the loop.
+?>
+</section>
 <nav class="filter_section2">
 
 <div id="alle" class="buttonContainer2">
@@ -78,13 +64,13 @@ get_header();
 
 	<div id="tema5" class="buttonContainer2">
 	<button id="filterknap" class="" data-kategori="LGBTQ+ og normer">LGBTQ+ og normer</button>
-		<img src="https://xn--mflingo-q1a.dk/kea/ungdomsbyen/wp-content/uploads/2021/11/uddanelsesvalg.png" alt="">
+		<img src="https://xn--mflingo-q1a.dk/kea/ungdomsbyen/wp-content/uploads/2021/11/LGBTQ-og-normer.png" alt="">
 	
 	</div>
 
 	<div id="tema6" class="buttonContainer2">
 	<button id="filterknap" class="" data-kategori="Demokrati og medborgerskab">Demokrati og Medborgerskab</button>
-		<img src="https://xn--mflingo-q1a.dk/kea/ungdomsbyen/wp-content/uploads/2021/11/uddanelsesvalg.png" alt="">
+		<img src="https://xn--mflingo-q1a.dk/kea/ungdomsbyen/wp-content/uploads/2021/11/demonkrati-og-medborgerskab.png" alt="">
 	
 	</div>
 

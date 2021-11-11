@@ -3,7 +3,7 @@ Theme Name: Child Theme 1
 Template: twentynineteen
 Author: Rosa Sahlholt
 Description: Stylish Child Theme based on Twenty Nineteen
-Version: 1.3.9.9
+Version: 1.4.0.0
 */
 img {
   width: 100%;
@@ -97,33 +97,7 @@ input[type="submit"]:focus {
   outline: none;
 }
 
-/* button styling button on top of img*/
-.buttonContainer {
-  align-content: center;
-  position: relative;
-}
-.buttonContainer img {
-  width: 100%;
-}
 
-.buttonContainer button {
-  position: absolute;
-  bottom: 38%;
-  left: 18%;
-  padding: 1em 1.5em;
-  z-index: 1;
-  width: 270px;
-}
-
-.filter_section {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-  row-gap: 20px;
-  column-gap: 40px;
-  padding: 2rem;
-  margin: auto;
-  max-width: 1700px;
-}
 
 /* button styling, button over img*/
 .buttonContainer2{

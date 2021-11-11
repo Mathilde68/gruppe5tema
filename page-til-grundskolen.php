@@ -111,7 +111,7 @@ endwhile; // End the loop.
 
             <div id="tema3" class="buttonContainer2">
             <button id="filterknap" class="gs" data-kategori="Demokrati og Medborgerskab">Demokrati og medborgerskab</button>
-            <img src="https://xn--mflingo-q1a.dk/kea/ungdomsbyen/wp-content/uploads/2021/11/konflikt.png" alt="">
+            <img src="https://xn--mflingo-q1a.dk/kea/ungdomsbyen/wp-content/uploads/2021/11/demonkrati-og-medborgerskab.png" alt="">
 
                
 

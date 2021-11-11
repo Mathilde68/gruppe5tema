@@ -83,7 +83,7 @@ endwhile; // End the loop.
 
 <div id="tema3" class="buttonContainer2">
 <button id="filterknap" class="onk" data-kategori="LGBTQ+ og normer">LGBTQ+ og normer</button>
-<img src="https://xn--mflingo-q1a.dk/kea/ungdomsbyen/wp-content/uploads/2021/11/konflikt.png" alt="">
+<img src="https://xn--mflingo-q1a.dk/kea/ungdomsbyen/wp-content/uploads/2021/11/LGBTQ-og-normer.png" alt="">
 
 </div>
            
