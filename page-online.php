@@ -76,7 +76,7 @@ endwhile; // End the loop.
 </section>
 
 	<div class="overskrift-container">
-<h2 id="overskrift" class="">Online kurser</h2>
+<h3 id="overskrift" class="">Online kurser</h3>
 </div>
 <section id="oversigt"></section>
 </main><!-- #main -->
