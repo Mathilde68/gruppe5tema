@@ -111,10 +111,10 @@ endwhile; // End the loop.
             </div>
 
 </nav>
-
+<div class="overskrift-container">
             <h2 id="overskrift" class="overskrift_gs">Kurser til grundskolen</h2>
 
-
+            </div>
 
 <section id="oversigt"></section>
 

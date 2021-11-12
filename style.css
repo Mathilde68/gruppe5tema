@@ -3,7 +3,7 @@ Theme Name: Child Theme 1
 Template: twentynineteen
 Author: Rosa Sahlholt
 Description: Stylish Child Theme based on Twenty Nineteen
-Version: 1.4.5.0
+Version: 1.4.7.1
 */
 img {
   width: 100%;
@@ -12,7 +12,29 @@ img {
   display: none;
 }
 
+@media only screen and (min-width: 1168px){
+.entry .entry-content > *, 
+.entry .entry-summary > *, 
+.entry .entry-summary > .wp-block-group > .wp-block-group__inner-container > *,
+ .entry .entry-content > .wp-block-group > .wp-block-group__inner-container > * {
+    max-width: 1200px;
+    margin:0 auto;
+}}
 
+
+@media only screen and (min-width: 768px){
+
+.entry .entry-content, .entry .entry-summary {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  }
+
+  .entry .entry-content, .entry .entry-summary {
+    max-width: 1200px;
+    margin:0 auto;
+}
 
 p,
 li,
@@ -132,14 +154,14 @@ input[type="submit"]:focus {
 
 .filter_section2 {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
   align-content: center;
   justify-content: center;
   row-gap: 20px;
   column-gap: 40px;
-  padding: 3rem;
+  padding: 0.5rem;
   margin: auto;
-  max-width: 1600px;
+  max-width: 1300px;
 }
 
 /* colors til de forsk. kursus sider*/
@@ -153,8 +175,8 @@ input[type="submit"]:focus {
   color: #FF4A69;
 }
 
-#overskrift-onk{
-  color: #FF4A69;
+.info-box-onk{
+  background-color:#ff7d92;
 }
 
 /* undervisere og ledere*/
@@ -176,11 +198,15 @@ input[type="submit"]:focus {
 }
 /* grundskole*/
 .gs{
-  background-color: #c85ee2;
+  background-color: #b26ac4;
+}
+
+.info-box-gs{
+  background-color:#e2c2e9;
 }
 
 .overskrift_gs{
-  color: #c85ee2;
+  color: #c35add;
 }
 
 /* ungdsomsuddannelser*/
@@ -195,15 +221,21 @@ input[type="submit"]:focus {
 .overskrift_es{
   color:#FF8434
 }
+/*overskriften over loopview*/
+.overskrift-container{
+  max-width: 1200px;
+  margin:0 auto;
+}
 
-
-
+#overskrift{
+  padding:1rem;
+}
+/*----------loop view----*/
 #oversigt {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   row-gap: 20px;
-  column-gap: 40px;
-  padding: 2rem;
+  column-gap: 60px;
   margin: auto;
   max-width: 1100px;
 
@@ -225,10 +257,11 @@ h1:not(.site-title):before, h2:before{
 .entry-footer{
   display: none;
 }
+
 .entry-content .info-section{
   box-sizing: border-box;
-  max-width: 100%;
-  margin: 0;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
  div > section
@@ -236,9 +269,9 @@ h1:not(.site-title):before, h2:before{
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   row-gap: 8px;
-  column-gap: 100px;
+  column-gap: 80px;
   margin-top: 1.5rem;
-  margin-left:2rem;
+  margin-left:1rem;
   max-width: 1100px;
 }
 
@@ -247,7 +280,6 @@ h1:not(.site-title):before, h2:before{
 }
 
 .info-box{
-  background-color:#ff7d92;
   display:flex;
   flex-direction: column;
   align-content: space-between;
@@ -256,6 +288,8 @@ h1:not(.site-title):before, h2:before{
   margin-bottom:1.5rem;
   border-radius: 15px;
 }
+
+
 
 .wp-block-buttons {
   margin: 1rem;

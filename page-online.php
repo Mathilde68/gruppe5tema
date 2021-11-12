@@ -75,8 +75,9 @@ endwhile; // End the loop.
 </nav>
 </section>
 
-	
-<h2 id="overskrift-onk" class="overskrift-onk">Online kurser</h2>
+	<div class="overskrift-container">
+<h2 id="overskrift" class="">Online kurser</h2>
+</div>
 <section id="oversigt"></section>
 </main><!-- #main -->
 </section><!-- #section -->
@@ -86,7 +87,7 @@ endwhile; // End the loop.
 <script>let kurser;
 let filter = "alle";
 
-let nyOverskrift = document.querySelector("#overskrift-onk");
+let nyOverskrift = document.querySelector("#overskrift");
       
 	  //url til wp restapi db - læg mærke til den her kun indhenter data med kategori 5 (numreringen på online kategorien)
 	  const url = "https://xn--mflingo-q1a.dk/kea/ungdomsbyen/wp-json/wp/v2/kursus?categories=5";

@@ -75,7 +75,9 @@ endwhile; // End the loop.
 	</div>
 
 </nav>
+<div class="overskrift-container">
 		<h2 id="overskrift">Alle kurser</h2>
+		</div>
 			<section id="oversigt"></section>
 
 		</main><!-- #main -->
