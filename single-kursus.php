@@ -12,43 +12,57 @@ get_header();
 
 <style>
 
+ .container{
+     max-width:1200px;
+     margin:0 auto;
+ }   
+
 .kurset_section {
     display: grid; 
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     padding: 20px;
+    row-gap: 8px;
+    column-gap: 80px;
+    margin-top: 1.5rem;
+    margin-left:1rem;
+    max-width: 1100px;
     
 }
 
 .infoboks1 {
-    grid-column: 1/2;
+    margin-top:1rem;
 }
 
 .infoboks2 {
-    grid-column: 3/4;
+    display:flex;
+  flex-direction: column;
+  align-content: space-between;
+  padding: 10px 20px 15px 20px;
+  margin-top:1.5rem;
+  margin-bottom:1.5rem;
+  border-radius: 15px;
+  background-color: #75c0c7;
+   /* grid-column: 3/4;
     
-    margin-top: 20px;
+    margin-top: 20px; */
+}
+.infoboks3 {
+    display: grid;
+  grid-auto-columns: minmax(350px, auto);
+  grid-gap: 80px;
+    margin-top: 1rem;
+    max-width: 1100px;
+   /* grid-column: 3/4;
+    
+    margin-top: 20px; */
 }
 
-#farveboks {
-    background-color: lightblue;
-
+.pris, .laengde , .antal_deltagere, .klassetrin {
+    font-size: 0.9rem;
+    font-weight:400;
 }
-.pris {
-    padding: 10px;
-}
-
-.laengde {
-    padding: 10px;
-}
-
-
-.antal_deltagere {
-    padding: 10px;
-}
-
-
-.klassetrin {
-    padding: 10px;
+#bold{
+    font-weight:600;
 }
 
 
@@ -61,34 +75,39 @@ get_header();
 
 <section id="primary" class="content-area">
 <main id="main" class="site-main"> 
-
+<section class="container">
  <article class="kurset">
-            
-       <section class="kurset_section">   
-			
+ <h2 class="navn"></h2>   
+       <section class="kurset_section">  
+
             <div class="infoboks1"> 
-                  <h2 class="navn"></h2>
             <p class="kortbeskrivelse"></p>
             <p class="langbeskrivelse"></p>
- 
-			</div>
+            </div>
 
             <div class="infoboks2">
-                <div id="farveboks">
-            <p class="pris"></p>
-            <p class="laengde"></p>
-            <p class="antal_deltagere"></p>
-            <p class="klassetrin"></p> </div>
+            <h4>Informationer om kurset</h4>
+            <p class="pris"><span id="bold">Pris:  </span></p>
+            <p class="laengde"><span id="bold">Varighed:  </span></p>
+            <p class="antal_deltagere"><span id="bold">Antal deltagere:  </span></p>
+            <p class="klassetrin"><span id="bold">Klassetrin:  </span></p>
             </div> </section> 
-        
+
+           
             <img class="billede" src="" alt="">
-            <h3 class="underoverskrift1"></h3>
+            <h3>Yderligere informationer om kurset:</h3>
+            <div class="infoboks3">
+                <div> <h4 class="underoverskrift1"></h4>
             <p class="yderligereinfo_1"></p>
+            </div>
+           <div>
             <h4 class="underoverskrift2"></h4>
             <p class="yderligereinfo_2"></p>
+            </div>
+            </div>
            
         </article>
-
+        </section>
 
 
 
@@ -115,20 +134,20 @@ get_header();
       //Vis data om kurset 
 
         function visKurser() {
-                document.querySelector("h2").textContent = kursus.navn;
+                document.querySelector(".navn").textContent = kursus.navn;
                 document.querySelector(".kortbeskrivelse").textContent = kursus.kort_beskrivelse;
                 document.querySelector(".langbeskrivelse").textContent = kursus.lang_beskrivelse;
-                document.querySelector(".pris").textContent = kursus.pris;
-                document.querySelector(".laengde").textContent = kursus.laengde;
-                document.querySelector(".antal_deltagere").textContent = kursus.antal_deltagere;
-                document.querySelector(".klassetrin").textContent = kursus.klassetrin;
+                document.querySelector(".pris").textContent += kursus.pris;
+                document.querySelector(".laengde").textContent += kursus.laengde;
+                document.querySelector(".antal_deltagere").textContent += kursus.antal_deltagere;
+                document.querySelector(".klassetrin").textContent += kursus.klassetrin;
 
                 
                 document.querySelector(".billede").src = kursus.billede.guid;
 
-                document.querySelector("h3").textContent = kursus.underoverskrift1;
+                document.querySelector(".underoverskrift1").textContent = kursus.underoverskrift1;
                 document.querySelector(".yderligereinfo_1").textContent = kursus.yderligere_information1;
-                document.querySelector("h4").textContent = kursus.underoverskrift2;
+                document.querySelector(".underoverskrift2").textContent = kursus.underoverskrift2;
                 document.querySelector(".yderligereinfo_2").textContent = kursus.yderligere_information_2;
             }
 

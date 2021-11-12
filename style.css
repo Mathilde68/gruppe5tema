@@ -3,7 +3,7 @@ Theme Name: Child Theme 1
 Template: twentynineteen
 Author: Rosa Sahlholt
 Description: Stylish Child Theme based on Twenty Nineteen
-Version: 1.4.9.7
+Version: 1.5.2.4
 */
 img {
   width: 100%;
@@ -12,6 +12,7 @@ img {
   display: none;
 }
 
+/*
 @media only screen and (min-width: 1168px){
 .entry .entry-content > *, 
 .entry .entry-summary > *, 
@@ -21,20 +22,8 @@ img {
     margin:0 auto;
 }}
 
+*/
 
-@media only screen and (min-width: 768px){
-
-.entry .entry-content, .entry .entry-summary {
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-
-  .entry .entry-header {
-   display:none;
-
-}
-
-  }
 
   .entry .entry-content, .entry .entry-summary {
     max-width: 1300px;
@@ -42,30 +31,48 @@ img {
 }
 
 
+#post-184 .entry-content{
+  width:100%;
+  margin-left:0;
+  margin-right:0;
+}
 
+.entry .entry-header {
+  display:none;
+
+  /*fonts*/
+}
+h1,
+h2,
+h3{
+  font-family: 'playfair_displayregular', Georgia, 'Times New Roman', Times, serif, serif;
+  font-weight: 500;
+}
+
+h4,
+h5,
 p,
 li,
 a, label {
-  font-family: 'helveticaneuethin', "helveticaneue", BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
-  Ubuntu, Cantarell, "Open Sans", sans-serif, "Fira Sans", "Droid Sans", "Helvetica Neue";
-   font-weight: 300; 
-   letter-spacing: 2px;
+  font-family: 'georgiaregular', Georgia, 'Times New Roman', Times, serif;
+   font-weight: 400; 
 }
-
+h1{
+  font-weight: 600;
+  font-size:2.7rem;
+}
+h2{
+  font-size:1.7rem;
+}
+h4{
+  font-weight: 500;
+  font-size: 1.13rem;
+}
 p{
-  font-size:0.8em;
+  font-size:0.8rem;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5
- {
-  font-family: 'helveticaneuebold', "helveticaneue", BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
-  Ubuntu, Cantarell, "Open Sans", sans-serif,  "Fira Sans", "Droid Sans", "Helvetica Neue";
-  font-weight: 400;
-}
+
 
 .main-navigation a {
   color: rgba(1, 1, 1, 1) !important;
@@ -76,7 +83,7 @@ h5
 }
 
 a {
-  font-family: Arial, Helvetica, sans-serif;
+ /* font-family: Arial, Helvetica, sans-serif;*/
   font-weight: 100;
 }
 
@@ -88,15 +95,17 @@ a {
   padding: 10px;
 }
 
+/*
 label {
   font-family: Arial, Helvetica, sans-serif;
 }
+*/
 
 #wpforms-submit-172 {
   color: white;
   background-color: black;
   border-radius: 20px;
-  font-family: Arial, Helvetica, sans-serif;
+  /*font-family: Arial, Helvetica, sans-serif;*/
 }
 
 #colophon {
@@ -113,8 +122,9 @@ input[type="submit"] {
   border-radius: 5px;
   box-sizing: border-box;
   color: white;
-  font-family: "Helvetica", Sans-serif, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", sans-serif;
-  font-size: 15px;
+  font-family: 'georgiaregular', Georgia, 'Times New Roman', Times, serif;
+ /* font-family: "Helvetica", Sans-serif, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", sans-serif;*/
+  font-size: 16px;
   font-weight: 300;
   line-height: 1.2;
   letter-spacing:0.05em;
@@ -189,20 +199,28 @@ input[type="submit"]:focus {
 
 /* undervisere og ledere*/
 .uol{
-  background-color: #87A2FF;
+  background-color: #3e66e9;
 }
 
 .overskrift_uol{
   color: #3e66e9;
 
 }
+
+.info-box-uol{
+  background-color: #5b80f8
+}
 /*kommunen*/
 .k{
-  background-color: #2A2D6C;
+  background-color: #292b5e;
 }
 
 .overskrift_k{
   color: #2A2D6C;
+}
+
+.info-box-k{
+  background-color: #657ad4;
 }
 /* grundskole*/
 .gs{
@@ -219,11 +237,15 @@ input[type="submit"]:focus {
 
 /* ungdsomsuddannelser*/
 	.uu{
-		background-color: #B1DADE;
+		background-color: #99cccd;
 	}
 
 	.overskrift_uu{
     color: #75C0C7;
+}
+
+.info-box-uu{
+  background-color: #99cccd;
 }
 /* efterskoler*/
 .overskrift_es{
@@ -303,11 +325,19 @@ h1:not(.site-title):before, h2:before{
 
 
 
-.wp-block-buttons .knapper{
+.wp-block-buttons{
   margin: 1rem;
   justify-content: center;
   display: flex;
   justify-content: space-around;
   flex-direction: row;
+}
+
+wp-block-button__link{
+  font-family: 'georgiaregular', Georgia, 'Times New Roman', Times, serif;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.2;
+  letter-spacing:0.05em;
 }
 

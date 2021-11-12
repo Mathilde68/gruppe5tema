@@ -93,7 +93,7 @@ endwhile; // End the loop.
 
 </nav>
 <div class="overskrift-container">
-			<h2 id="overskrift" class="overskrift_uu">Kurser til ungdomsuddanelser</h2>
+			<h3 id="overskrift" class="">Kurser til ungdomsuddanelser</h3>
 			</div>
 			<section id="oversigt"></section>
 
