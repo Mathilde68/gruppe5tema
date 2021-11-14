@@ -79,6 +79,12 @@ endwhile; // End the loop.
 <h3 id="overskrift" class="">Kurser til undervisere og ledere</h3>
 </div>
 <section id="oversigt">	</section>
+
+
+<div id="go-to-top-container">
+<a  id="go-to" href="#main">Til toppen</a>
+</div>
+
 </main><!-- #main -->
 </section><!-- #section -->
 
@@ -112,12 +118,19 @@ filterKnapper.forEach(knap => knap.addEventListener("click", filtrerKurser));
 function filtrerKurser (){
 	filter = this.dataset.kategori;
 
-	  //ændrer overskriften
-	  nyOverskrift.textContent = this.textContent + " til undervisere og ledere";
+	//ændrer overskriften
+	nyOverskrift.textContent = this.textContent + " til undervisere og ledere";
 
 	document.querySelector(".valgt").classList.remove("valgt");
+
+
     this.classList.add("valgt");
+
 	visKurser();
+
+	//smoothly scroller ned til indholdet efter tryk
+	document.querySelector(".overskrift-container").scrollIntoView({behavior: 'smooth'});
+
 }
 
 	  function visKurser(){

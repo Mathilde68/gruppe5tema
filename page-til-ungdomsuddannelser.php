@@ -63,7 +63,7 @@ endwhile; // End the loop.
 ?>
 
 
-<nav class="filter_section2">
+<nav id="filter-oversigt" class="filter_section2">
 
 	<div id="alle" class="buttonContainer2">
 		
@@ -96,7 +96,9 @@ endwhile; // End the loop.
 			<h3 id="overskrift" class="">Kurser til ungdomsuddanelser</h3>
 			</div>
 			<section id="oversigt"></section>
-
+<div id="go-to-top-container">
+<a  id="go-to" href="#main">Til toppen</a>
+</div>
 		</main><!-- #main -->
 
 		</section><!-- #section -->
@@ -175,6 +177,10 @@ let nyOverskrift = document.querySelector("#overskrift");
 		  //kalder function vis kurser efter det nye filter er sat
 
 		  visKurser();
+
+
+		//smoothly scroller ned til indholdet efter tryk
+		document.querySelector(".overskrift-container").scrollIntoView({behavior: 'smooth'});
 
         }
 

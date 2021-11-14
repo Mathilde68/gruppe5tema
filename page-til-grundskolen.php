@@ -74,7 +74,7 @@ endwhile; // End the loop.
     <nav class="filter_section2">
 
         <div id="alle" class="buttonContainer2">
-            <button id="filterknap" class="gs valgt-gs" data-kategori="alle">Alle kurser</button>
+            <button id="filterknap" class="gs valgt" data-kategori="alle">Alle kurser</button>
             <img src="https://xn--mflingo-q1a.dk/kea/ungdomsbyen/wp-content/uploads/2021/11/konflikt.png" alt="">  
         </div>
 
@@ -118,6 +118,10 @@ endwhile; // End the loop.
 
 <section id="oversigt"></section>
 
+
+	<div id="go-to-top-container">
+<a  id="go-to" href="#main">Til toppen</a>
+</div>
 
 
 		</main><!-- #main -->
@@ -195,9 +199,9 @@ let nyOverskrift = document.querySelector("#overskrift");
 
 		   //fjerner oog tilføjer valgt class til den rigtige knap
 
-		   document.querySelector(".valgt-gs").classList.remove("valgt-gs");
+		   document.querySelector(".valgt").classList.remove("valgt");
 
-            this.classList.add("valgt-gs");
+            this.classList.add("valgt");
 
 
 
@@ -206,6 +210,10 @@ let nyOverskrift = document.querySelector("#overskrift");
 		  //kalder function vis kurser efter det nye filter er sat
 
 		  visKurser();
+
+
+        //scroller ned til indholdet efter tryk
+        document.querySelector(".overskrift-container").scrollIntoView({behavior: 'smooth'});
 
         }
 

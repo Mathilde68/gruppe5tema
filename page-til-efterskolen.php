@@ -44,13 +44,15 @@ while ( have_posts() ) :
 endwhile; // End the loop.
 ?>
 	
-	
+	<section id="oversigt"></section>
+	<div id="go-to-top-container">
+<a  id="go-to" href="#main">Til toppen</a>
+</div>
+
 	</main><!-- #main -->
 
 	</section><!-- #section -->	
 
-	<section id="oversigt"></section>
-		
 
 
 <script>let kurser;

@@ -47,27 +47,27 @@ if ( comments_open() || get_comments_number() ) {
 endwhile; // End the loop.
 ?>
 
-	<nav class="filter_section2">
+	<nav id="filter-oversigt" class="filter_section2">
 	<div id="alle" class="buttonContainer2">
-	<button id="filterknap" class="valgt onk" data-kategori="alle">Alle kurser</button>
+	<button id="filterknap" class="valgt onk" data-kategori="alle" >Alle kurser</button>
 <img src="https://xn--mflingo-q1a.dk/kea/ungdomsbyen/wp-content/uploads/2021/11/konflikt.png" alt="">
 
 </div>
 
 <div id="tema1" class="buttonContainer2">
-<button id="filterknap" class="onk" data-kategori="Konflikthåndtering">Konflikthåndtering</button>
+<button id="filterknap" class="onk" data-kategori="Konflikthåndtering" >Konflikthåndtering</button>
 <img src="https://xn--mflingo-q1a.dk/kea/ungdomsbyen/wp-content/uploads/2021/11/konflikt.png" alt="">
 
 </div>
 
 <div id="tema2" class="buttonContainer2">
-<button id="filterknap" class="onk" data-kategori="Fn's 17 verdensmål">Fn's 17 verdensmål</button>
+<button id="filterknap" class="onk" data-kategori="Fn's 17 verdensmål" >Fn's 17 verdensmål</button>
 <img src="https://xn--mflingo-q1a.dk/kea/ungdomsbyen/wp-content/uploads/2021/11/konflikt.png" alt="">
 
 </div>
 
 <div id="tema3" class="buttonContainer2">
-<button id="filterknap" class="onk" data-kategori="LGBTQ+ og normer">LGBTQ+ og normer</button>
+<button id="filterknap" class="onk" data-kategori="LGBTQ+ og normer" >LGBTQ+ og normer</button>
 <img src="https://xn--mflingo-q1a.dk/kea/ungdomsbyen/wp-content/uploads/2021/11/LGBTQ-og-normer.png" alt="">
 
 </div>
@@ -79,6 +79,10 @@ endwhile; // End the loop.
 <h3 id="overskrift" class="">Online kurser</h3>
 </div>
 <section id="oversigt"></section>
+
+<div id="go-to-top-container">
+<a  id="go-to" href="#main">Til toppen</a>
+</div>
 </main><!-- #main -->
 </section><!-- #section -->
 	
@@ -136,6 +140,9 @@ let nyOverskrift = document.querySelector("#overskrift");
 		  //kalder function vis kurser efter det nye filter er sat
 
 		  visKurser();
+
+		//scroller ned til indholdet efter tryk
+		document.querySelector(".overskrift-container").scrollIntoView({behavior: 'smooth'});
 
         }
 

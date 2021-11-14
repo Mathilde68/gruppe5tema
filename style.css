@@ -3,7 +3,7 @@ Theme Name: Child Theme 1
 Template: twentynineteen
 Author: Rosa Sahlholt
 Description: Stylish Child Theme based on Twenty Nineteen
-Version: 1.5.2.4
+Version: 1.5.3.9
 */
 img {
   width: 100%;
@@ -249,7 +249,7 @@ input[type="submit"]:focus {
 }
 /* efterskoler*/
 .overskrift_es{
-  color:#FF8434
+  color:#FF8434;
 }
 
 .info-box-es{
@@ -264,7 +264,7 @@ input[type="submit"]:focus {
 #overskrift{
   padding:1rem;
 }
-/*----------loop view----*/
+/*----------kursus oversigt- loop view del----*/
 #oversigt {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -272,6 +272,7 @@ input[type="submit"]:focus {
   column-gap: 60px;
   margin: auto;
   max-width: 1100px;
+  margin-bottom: 2rem;
 
 }
 
@@ -296,6 +297,24 @@ h1:not(.site-title):before, h2:before{
   box-sizing: border-box;
   max-width: 1300px;
   margin: 0 auto;
+}
+
+#go-to-top-container{
+  display: flex;
+  justify-content: end;
+  margin-bottom: 2rem;
+  margin-right: 100px;
+}
+#go-to{
+  color: rgb(94 165 187);
+  text-align: right;
+ padding:10px;
+  font-size: 0.85rem
+}
+
+#go-to:hover{
+  color:rgb(8, 8, 8);
+  cursor: pointer;
 }
 
  div > section
@@ -324,7 +343,7 @@ h1:not(.site-title):before, h2:before{
 }
 
 
-
+/*-- wp buttons ---*/
 .wp-block-buttons{
   margin: 1rem;
   justify-content: center;
@@ -333,7 +352,7 @@ h1:not(.site-title):before, h2:before{
   flex-direction: row;
 }
 
-wp-block-button__link{
+.wp-block-button__link{
   font-family: 'georgiaregular', Georgia, 'Times New Roman', Times, serif;
   font-size: 16px;
   font-weight: 300;

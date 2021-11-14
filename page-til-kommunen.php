@@ -74,6 +74,9 @@ endwhile; // End the loop.
 			<section id="oversigt">
 			
 
+			<div id="go-to-top-container">
+<a  id="go-to" href="#main">Til toppen</a>
+</div>
 		</main><!-- #main -->
 		</section><!-- #section -->
 	
@@ -118,6 +121,9 @@ let nyOverskrift = document.querySelector("#overskrift");
 
 		  //kalder function vis kurser efter det nye filter er sat
 		  visKurser();
+
+		  //smoothly scroller ned til indholdet efter tryk
+		  document.querySelector(".overskrift-container").scrollIntoView({behavior: 'smooth'});
         }
 		
 		function visKurser(){
