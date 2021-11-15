@@ -34,10 +34,10 @@ get_header();
 
 	<p class="pris"></p>
 
-	<button class="seMere">Læs mere</button>
+	
 
 	</div>
-
+	<button class="seMere">Læs mere</button>
 </article>
 
 </template>
@@ -67,8 +67,8 @@ endwhile; // End the loop.
 
 	<div id="alle" class="buttonContainer2">
 		
-	<button id="filterknap" class="valgt uu" data-kategori="alle">Alle kurser</button>
-		<img src="https://xn--mflingo-q1a.dk/kea/ungdomsbyen/wp-content/uploads/2021/11/konflikt.png" alt="">
+	<button id="filterknap" class="valgt uu" data-kategori="alle">Alle tilbud</button>
+		<img src="https://xn--mflingo-q1a.dk/kea/ungdomsbyen/wp-content/uploads/2021/11/alle.png" alt="">
 	
 	</div>
 
@@ -80,7 +80,7 @@ endwhile; // End the loop.
 
 	<div id="tema2" class="buttonContainer2">
 	<button id="filterknap" class="uu" data-kategori="Fn's 17 verdensmål">Fn's 17 verdensmål</button>
-	<img src="https://xn--mflingo-q1a.dk/kea/ungdomsbyen/wp-content/uploads/2021/11/konflikt.png" alt="">
+	<img src="https://xn--mflingo-q1a.dk/kea/ungdomsbyen/wp-content/uploads/2021/11/FN.png" alt="">
 	</div>
 		
 		
@@ -97,7 +97,7 @@ endwhile; // End the loop.
 			</div>
 			<section id="oversigt"></section>
 <div id="go-to-top-container">
-<a  id="go-to" href="#main">Til toppen</a>
+<p  id="go-to" class="go-top" >Til toppen</p>
 </div>
 		</main><!-- #main -->
 
@@ -185,6 +185,13 @@ let nyOverskrift = document.querySelector("#overskrift");
         }
 
 
+ //click eventlistener og function der scroller fra "til toppen" knap i bunden - til toppen af siden.
+ document.querySelector(".go-top").addEventListener("click", scrollUp);
+
+function scrollUp(){
+console.log("i work");
+document.querySelector(".content-area").scrollIntoView({behavior: 'smooth'});
+ }
 
 	  function visKurser(){
 

@@ -17,8 +17,9 @@ get_header();
 	<div>
 	<p class="kortbeskrivelse"></p>
 	<p class="pris"></p>
-	<button class="seMere">Læs mere</button>
+	
 	</div>
+	<button class="seMere">Læs mere</button>
 </article>
 </template>
 
@@ -51,7 +52,7 @@ endwhile; // End the loop.
 	<div id="alle" class="buttonContainer2">
 		
 	<button id="filterknap" class="uol valgt" data-kategori="alle">Alle kurser</button>
-		<img src="https://xn--mflingo-q1a.dk/kea/ungdomsbyen/wp-content/uploads/2021/11/konflikt.png" alt="">
+		<img src="https://xn--mflingo-q1a.dk/kea/ungdomsbyen/wp-content/uploads/2021/11/alle.png" alt="">
 	
 	</div>
 
@@ -63,14 +64,14 @@ endwhile; // End the loop.
 
 	<div id="tema2" class="buttonContainer2">
 	<button id="filterknap" class="uol" data-kategori="Fn's 17 verdensmål">Fn's 17 verdensmål</button>
-	<img src="https://xn--mflingo-q1a.dk/kea/ungdomsbyen/wp-content/uploads/2021/11/konflikt.png" alt="">
+	<img src="https://xn--mflingo-q1a.dk/kea/ungdomsbyen/wp-content/uploads/2021/11/FN.png" alt="">
 	</div>
 		
 		
 
 	<div id="tema3" class="buttonContainer2">
 	<button id="filterknap" class="uol" data-kategori="Demokrati og medborgerskab">Demokrati og Medborgerskab</button>
-		<img src="https://xn--mflingo-q1a.dk/kea/ungdomsbyen/wp-content/uploads/2021/11/demonkrati-og-medborgerskab.png" alt="">
+		<img src="https://xn--mflingo-q1a.dk/kea/ungdomsbyen/wp-content/uploads/2021/11/Demokrati-og-medborgerskab.png" alt="">
 		
 	</div>
 
@@ -82,7 +83,7 @@ endwhile; // End the loop.
 
 
 <div id="go-to-top-container">
-<a  id="go-to" href="#main">Til toppen</a>
+<p  id="go-to" class="go-top" >Til toppen</p>
 </div>
 
 </main><!-- #main -->
@@ -113,25 +114,33 @@ let nyOverskrift = document.querySelector("#overskrift");
 	  }
 
 let filterKnapper = document.querySelectorAll("#filterknap");
+
 filterKnapper.forEach(knap => knap.addEventListener("click", filtrerKurser));
 
 function filtrerKurser (){
 	filter = this.dataset.kategori;
+	
 
 	//ændrer overskriften
 	nyOverskrift.textContent = this.textContent + " til undervisere og ledere";
 
 	document.querySelector(".valgt").classList.remove("valgt");
-
-
     this.classList.add("valgt");
 
 	visKurser();
 
 	//smoothly scroller ned til indholdet efter tryk
 	document.querySelector(".overskrift-container").scrollIntoView({behavior: 'smooth'});
-
+	
 }
+
+ //click eventlistener og function der scroller fra "til toppen" knap i bunden - til toppen af siden.
+ document.querySelector(".go-top").addEventListener("click", scrollUp);
+
+function scrollUp(){
+console.log("i work");
+document.querySelector(".content-area").scrollIntoView({behavior: 'smooth'});
+ }
 
 	  function visKurser(){
 		  console.log(kurser);

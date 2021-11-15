@@ -3,28 +3,23 @@ Theme Name: Child Theme 1
 Template: twentynineteen
 Author: Rosa Sahlholt
 Description: Stylish Child Theme based on Twenty Nineteen
-Version: 1.5.3.9
+Version: 1.5.8.0
 */
+
+/*img size, remove unnecesary wp elements, adjusting margins*/
 img {
   width: 100%;
 }
 .entry .entry-title:before {
   display: none;
 }
+.entry .entry-header {
+  display:none;
+}
 
-/*
-@media only screen and (min-width: 1168px){
-.entry .entry-content > *, 
-.entry .entry-summary > *, 
-.entry .entry-summary > .wp-block-group > .wp-block-group__inner-container > *,
- .entry .entry-content > .wp-block-group > .wp-block-group__inner-container > * {
-    max-width: 1300px;
-    margin:0 auto;
-}}
-
-*/
-
-
+#colophon {
+  display: none;
+}
   .entry .entry-content, .entry .entry-summary {
     max-width: 1300px;
     margin:0 auto;
@@ -37,18 +32,13 @@ img {
   margin-right:0;
 }
 
-.entry .entry-header {
-  display:none;
-
-  /*fonts*/
-}
+/*fonts*/
 h1,
 h2,
 h3{
   font-family: 'playfair_displayregular', Georgia, 'Times New Roman', Times, serif, serif;
   font-weight: 500;
 }
-
 h4,
 h5,
 p,
@@ -72,8 +62,7 @@ p{
   font-size:0.8rem;
 }
 
-
-
+/*navigation*/
 .main-navigation a {
   color: rgba(1, 1, 1, 1) !important;
 }
@@ -95,21 +84,13 @@ a {
   padding: 10px;
 }
 
-/*
-label {
-  font-family: Arial, Helvetica, sans-serif;
-}
-*/
 
+/*forms*/
 #wpforms-submit-172 {
   color: white;
   background-color: black;
   border-radius: 20px;
   /*font-family: Arial, Helvetica, sans-serif;*/
-}
-
-#colophon {
-  display: none;
 }
 
 .button,
@@ -154,13 +135,13 @@ input[type="submit"]:focus {
 }
 
 
-
 /* button styling, button over img*/
 .buttonContainer2{
   display: flex;
   flex-direction: column;
  
 }
+
 
 .buttonContainer2 #filterknap{
   width: 100%;
@@ -172,14 +153,14 @@ input[type="submit"]:focus {
 
 .filter_section2 {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(235px, 1fr));
   align-content: center;
   justify-content: center;
   row-gap: 20px;
   column-gap: 40px;
   padding: 0.5rem;
   margin: auto;
-  max-width: 1300px;
+  max-width: 1200px;
 }
 
 /* colors til de forsk. kursus sider*/
@@ -268,16 +249,35 @@ input[type="submit"]:focus {
 #oversigt {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  row-gap: 20px;
+  row-gap: 60px;
   column-gap: 60px;
   margin: auto;
   max-width: 1100px;
   margin-bottom: 2rem;
 
 }
+.kurset img {
+  height: 200px;
+  object-fit: cover;
+  object-position: 20% 30%;
+}
+
+.kurset{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.kurset .navn{
+  font-size: 0.9rem;
+  margin: 8px 0;
+}
+
+
 
 #oversigt div p.kortbeskrivelse {
-  font-size: 0.7em;
+  font-size: 0.68em;
 }
 
 h1:not(.site-title):before, h2:before{
@@ -293,6 +293,9 @@ h1:not(.site-title):before, h2:before{
   display: none;
 }
 
+.info-section h2{
+  font-size: 37px;
+}
 .entry-content .info-section{
   box-sizing: border-box;
   max-width: 1300px;
@@ -359,4 +362,308 @@ h1:not(.site-title):before, h2:before{
   line-height: 1.2;
   letter-spacing:0.05em;
 }
+/*-------------SINGLEVIEW -----------------*/
+.container{
+  margin:0 auto;
+}  
 
+/*first section - info section*/
+#info-section{
+  max-width:1200px;
+  margin:0 auto;
+}
+
+.info-grid {
+ display: grid; 
+ grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+ padding: 0px 10px 0px 0px;
+ row-gap: 8px;
+ column-gap: 80px;
+ max-width: 1200px;
+ margin:0 auto;
+}
+
+.infoboks1 {
+ margin-top:1rem;
+
+}
+
+.infoboks2 {
+ padding: 10px 20px 15px 20px;
+ margin-bottom: 1.5rem;
+ border-radius: 15px;
+ background-color: #75c0c7;
+ max-width:550px;
+}
+
+.pris, .laengde , .antal_deltagere, .klassetrin {
+ font-size: 0.9rem;
+ font-weight:400;
+}
+
+.info-overskrift{
+ text-align: center;
+}
+
+.luk{
+ padding:14px 0px 2px 0px;
+}
+
+/*section section - picture and button*/
+.section2{
+ margin: 0 auto;
+ max-width: 1200px;
+ grid-template-columns: 50% 50%;
+ display: grid;
+ justify-content: center;
+}
+
+.farveboks{
+ display: flex;
+ flex-direction: column;
+ text-align: center;
+ align-content: space-between;
+ background-color: #C6EEEF;
+ justify-content: center;
+ align-self: center;
+ padding: 2rem;
+ width: 90vw;
+ margin-left: calc(50% - 50vw);
+ cursor:pointer;
+}
+
+.imgboks{
+ max-width: 550px;
+ margin-left: 2vw;
+}
+
+/* third section - booking -*/
+.booking{
+ padding-top:2.5rem;
+ max-width:1200px;
+  margin:0 auto;
+ 
+}
+
+.booking h4{
+ text-align:center;
+}
+#formular{
+ display: flex;
+  flex-direction: column;
+  justify-content:center;
+  align-items: center;
+  
+}
+
+.input-boks input{
+ width:100%;
+}
+
+
+.input-boks{
+ display:grid;
+ grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+ row-gap: 8px;
+ column-gap: 80px;
+ width:100%;
+ background-color: #e9fafb;
+ border-radius:5px;
+ padding: 30px 30px 10px 30px;
+
+}
+
+#booknu{
+ margin-top: 35px;
+ font-size: 20px;
+}
+
+
+.spørgsmål{
+ margin-top:2.3rem;
+ text-align: center;
+ background-color: #C6EEEF;
+ justify-content: center;
+ align-self: center;
+ padding: 1.5rem;
+ width:100%;
+}
+
+.tekst{
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ justify-content: space-between;
+}
+
+/*pop up*/
+#popup {
+overflow-y: scroll;
+display: none;
+position: fixed;
+left: 0;
+top: 0;
+width: 100vw;
+height: 100vh;
+background-color: rgba(36, 42, 51, 0.90);
+}
+
+#popup article {
+width: 50vw;
+margin: 8rem auto;
+padding: 8px 25px 36px 35px;
+border-radius: 25px;
+background-color: white;
+}
+
+#popup article h4{
+ padding-top:1.5rem;
+ color:#75c0c7;
+}
+
+#popup article #luk{
+color:  #75c0c7;
+margin-top: 10px;
+cursor:pointer;
+}
+
+#top-boks{
+ display:flex;
+ flex-direction:row;
+ justify-content: space-between;
+ 
+}
+
+/*------------mediaquery mobil-----------*/
+@media screen and (max-width:650px) {
+
+  /*general*/
+  .entry .entry-content, .entry .entry-summary {
+ max-width:730px;
+    margin: 0 15px;
+}
+
+  h1{
+    font-weight: 600;
+    font-size:1.6rem;
+  }
+  h2{
+    font-size:1.3rem;
+  }
+  h3{
+    font-size:1.15rem;
+  }
+  h4{
+    font-weight: 500;
+    font-size: 0.85rem;
+  }
+  p, li, label, a{
+    font-size:0.7rem;
+  }
+ 
+  /*filter*/
+  .filter_section2 {
+    grid-template-columns: repeat(auto-fill, minmax(100px, 180px ));
+    row-gap: 10px;
+    column-gap: 10px;
+    padding: 0.1rem;
+    margin: auto;
+  }
+/*info section*/
+.info-section h2{
+  font-size:1.3rem;
+}
+  div > section
+  .gridbox{
+  margin:0 auto;;
+  }
+.entry .entry-content .wp-block-image {
+  max-width: 90%;
+  margin: 0 auto;
+}
+ /*loop view section*/
+#oversigt {
+  margin: 0 22px;
+}
+
+.kurset{
+  align-items: center;
+}
+
+/*---- SINGLE VIEW----*/
+#info-section{
+  margin: 10px 0;
+}
+.info-grid{
+  display: block;
+}
+
+.pris, .laengde, .antal_deltagere, .klassetrin {
+  font-size:0.7rem;
+}
+
+.section2{
+  display: block;
+}
+.farveboks{
+align-content: space-between;
+ background-color: white;
+ padding: 0;
+width: 100%;
+margin: 0;
+
+}
+
+.input-boks{
+  display: block;
+}
+br{
+  display:none;
+}
+ input{
+   margin: 10px 0px;
+ }
+ #go-to-top-container{
+   display: block;
+ }
+
+ #popup article {
+  width: 90%;}
+
+}
+@media screen and (min-width:650px) and (max-width:1090px){
+  /* single*/
+  #info-section{
+    margin: 5px 30px;
+    max-width:900px;
+  }
+  .info-grid{
+    display: block;
+  }
+  
+  .pris, .laengde, .antal_deltagere, .klassetrin {
+    font-size:0.7rem;
+  }
+  
+  .infoboks2{
+    margin: 0 auto;
+  }
+  .section2{
+    display: block;
+  }
+  .farveboks{
+  align-content: space-between;
+   background-color: white;
+   padding: 0;
+  width: 100%;
+  margin: 0;
+  }
+
+  .imgboks{
+    margin: 10px auto;
+  }
+  /*loop view*/
+  #oversigt {
+    margin: 0 20px;
+  }
+}

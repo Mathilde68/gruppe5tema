@@ -21,8 +21,8 @@ get_header();
             <div>
             <p class="kortbeskrivelse"></p>
             <p class="pris"></p>
-			<button class="seMere">Læs mere</button>
             </div>
+			<button class="seMere">Læs mere</button>
         </article>
     </template>
 
@@ -50,8 +50,8 @@ endwhile; // End the loop.
 		<nav class="filter_section2">
 
             <div id="alle" class="buttonContainer2">
-			<button id="filterknap" class="k valgt" data-kategori="alle">Alle kurser</button>
-                <img src="https://xn--mflingo-q1a.dk/kea/ungdomsbyen/wp-content/uploads/2021/11/konflikt.png" alt="">
+			<button id="filterknap" class="k valgt" data-kategori="alle">Alle tilbud</button>
+                <img src="https://xn--mflingo-q1a.dk/kea/ungdomsbyen/wp-content/uploads/2021/11/alle.png" alt="">
                
             </div>
 
@@ -63,7 +63,7 @@ endwhile; // End the loop.
 
             <div id="tema2" class="buttonContainer2">
 			<button id="filterknap" class="k" data-kategori="Demokrati og medborgerskab">Demokrati og medborgerskab</button>
-                <img src="https://xn--mflingo-q1a.dk/kea/ungdomsbyen/wp-content/uploads/2021/11/demonkrati-og-medborgerskab.png" alt="">
+                <img src="https://xn--mflingo-q1a.dk/kea/ungdomsbyen/wp-content/uploads/2021/11/Demokrati-og-medborgerskab.png" alt="">
              
             </div>
 		</nav>
@@ -71,12 +71,12 @@ endwhile; // End the loop.
 		<div class="overskrift-container">
 			<h3 id="overskrift" class="">Kurser til kommunen</h3>
 			</div>
-			<section id="oversigt">
+			<section id="oversigt"> </section>
 			
 
 			<div id="go-to-top-container">
-<a  id="go-to" href="#main">Til toppen</a>
-</div>
+			<p  id="go-to" class="go-top" >Til toppen</p>
+			</div>
 		</main><!-- #main -->
 		</section><!-- #section -->
 	
@@ -125,6 +125,14 @@ let nyOverskrift = document.querySelector("#overskrift");
 		  //smoothly scroller ned til indholdet efter tryk
 		  document.querySelector(".overskrift-container").scrollIntoView({behavior: 'smooth'});
         }
+
+		 //click eventlistener og function der scroller fra "til toppen" knap i bunden - til toppen af siden.
+		 document.querySelector(".go-top").addEventListener("click", scrollUp);
+
+function scrollUp(){
+console.log("i work");
+document.querySelector(".content-area").scrollIntoView({behavior: 'smooth'});
+ }
 		
 		function visKurser(){
 		  console.log(kurser);
@@ -137,7 +145,6 @@ let nyOverskrift = document.querySelector("#overskrift");
 			   klon.querySelector(".navn").textContent = kursus.navn;
                 klon.querySelector("img").src = kursus.billede.guid;
                 klon.querySelector(".kortbeskrivelse").textContent = kursus.kort_beskrivelse;
-                klon.querySelector(".pris").textContent = "Pris: "+ kursus.pris;
 
 				klon.querySelector(".seMere").addEventListener("click", () => location.href=kursus.link);
 

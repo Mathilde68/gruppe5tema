@@ -20,8 +20,9 @@ get_header();
             <div>
             <p class="kortbeskrivelse"></p>
             <p class="pris"></p>
-			<button class="seMere">Læs mere</button>
+		
             </div>
+			<button class="seMere">Læs mere</button>
         </article>
     </template>
 
@@ -46,7 +47,7 @@ endwhile; // End the loop.
 	
 	<section id="oversigt"></section>
 	<div id="go-to-top-container">
-<a  id="go-to" href="#main">Til toppen</a>
+	<p  id="go-to" class="go-top" >Til toppen</p>
 </div>
 
 	</main><!-- #main -->
@@ -70,6 +71,14 @@ endwhile; // End the loop.
 		  kurser = await jsonData.json();
 		  visKurser();
 	  }
+
+	   //click eventlistener og function der scroller fra "til toppen" knap i bunden - til toppen af siden.
+	   document.querySelector(".go-top").addEventListener("click", scrollUp);
+
+function scrollUp(){
+console.log("i work");
+document.querySelector(".content-area").scrollIntoView({behavior: 'smooth'});
+ }
 
 	  function visKurser() {
             //const for destination af indhold og template
