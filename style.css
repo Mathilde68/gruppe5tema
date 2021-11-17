@@ -1,68 +1,76 @@
 /* 
 Theme Name: Child Theme 1
 Template: twentynineteen
-Author: Rosa Sahlholt
+Author: Rosa, Camilla, Katrine, Oliver, Mathilde
 Description: Stylish Child Theme based on Twenty Nineteen
-Version: 1.5.8.0
+Version: 1.5.8.4
 */
 
 /*img size, remove unnecesary wp elements, adjusting margins*/
+
 img {
   width: 100%;
 }
+
 .entry .entry-title:before {
   display: none;
 }
+
 .entry .entry-header {
-  display:none;
+  display: none;
 }
 
 #colophon {
   display: none;
 }
-  .entry .entry-content, .entry .entry-summary {
-    max-width: 1300px;
-    margin:0 auto;
+.entry-footer {
+  display: none;
 }
 
 
-#post-184 .entry-content{
-  width:100%;
-  margin-left:0;
-  margin-right:0;
+.entry .entry-content, .entry .entry-summary {
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+#post-184 .entry-content {
+  width: 100%;
+  margin-left: 0;
+  margin-right: 0;
 }
 
 /*fonts*/
-h1,
-h2,
-h3{
-  font-family: 'playfair_displayregular', Georgia, 'Times New Roman', Times, serif, serif;
+
+h1, h2, h3 {
+  font-family: "playfair_displayregular", Georgia, "Times New Roman", Times, serif, serif;
   font-weight: 500;
 }
-h4,
-h5,
-p,
-li,
-a, label {
-  font-family: 'georgiaregular', Georgia, 'Times New Roman', Times, serif;
-   font-weight: 400; 
+
+h4, h5, p, li, a, label {
+  font-family: "georgiaregular", Georgia, "Times New Roman", Times, serif;
+  font-weight: 400;
 }
-h1{
+
+h1 {
   font-weight: 600;
-  font-size:2.7rem;
+  font-size: 2.7rem;
 }
-h2{
-  font-size:1.7rem;
+
+h2 {
+  font-size: 1.7rem;
 }
-h4{
+
+h4 {
   font-weight: 500;
   font-size: 1.13rem;
 }
-p{
-  font-size:0.8rem;
+
+p {
+  font-size: 0.8rem;
 }
 
 /*navigation*/
+
 .main-navigation a {
   color: rgba(1, 1, 1, 1) !important;
 }
@@ -72,7 +80,6 @@ p{
 }
 
 a {
- /* font-family: Arial, Helvetica, sans-serif;*/
   font-weight: 100;
 }
 
@@ -84,66 +91,87 @@ a {
   padding: 10px;
 }
 
+/*forms og knapper*/
 
-/*forms*/
 #wpforms-submit-172 {
   color: white;
   background-color: black;
   border-radius: 20px;
-  /*font-family: Arial, Helvetica, sans-serif;*/
 }
 
-.button,
-button,
-input[type="button"],
-input[type="reset"],
-input[type="submit"] {
+.button, button, input[type="button"], input[type="reset"], input[type="submit"] {
   background: #99cccd;
   border: none;
   border-radius: 5px;
-  box-sizing: border-box;
   color: white;
-  font-family: 'georgiaregular', Georgia, 'Times New Roman', Times, serif;
- /* font-family: "Helvetica", Sans-serif, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", sans-serif;*/
+  font-family: "georgiaregular", Georgia, "Times New Roman", Times, serif;
   font-size: 16px;
   font-weight: 300;
   line-height: 1.2;
-  letter-spacing:0.05em;
+  letter-spacing: 0.05em;
   outline: none;
   padding: 0.7rem 1.2rem;
   text-decoration: none;
-  vertical-align: bottom;
 }
 
-.button:hover,
-button:hover,
-input[type="button"]:hover,
-input[type="reset"]:hover,
-input[type="submit"]:hover {
+.button:hover, button:hover, input[type="button"]:hover, input[type="reset"]:hover, input[type="submit"]:hover {
   background: #818a91;
   padding: 0.7rem 1.2rem;
   cursor: pointer;
 }
-.button:focus,
-button:focus,
-input[type="button"]:focus,
-input[type="reset"]:focus,
-input[type="submit"]:focus {
-  background:  #75C0C7;
-  outline: none;
 
+.button:focus, button:focus, input[type="button"]:focus, input[type="reset"]:focus, input[type="submit"]:focus {
+  background: #75c0c7;
+  outline: none;
 }
 
+/*-- wordpress buttons ---*/
 
-/* button styling, button over img*/
-.buttonContainer2{
+.wp-block-buttons {
+  margin: 1rem;
+  justify-content: center;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+}
+
+.wp-block-button__link {
+  font-family: "georgiaregular", Georgia, "Times New Roman", Times, serif;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.2;
+  letter-spacing: 0.05em;
+}
+
+/* --til toppen knap---*/
+#go-to-top-container {
+  display: flex;
+  justify-content: end;
+  margin-bottom: 2rem;
+  margin-right: 100px;
+}
+
+#go-to {
+  color: rgb(94 165 187);
+  text-align: right;
+  padding: 10px;
+  font-size: 0.85rem;
+  text-transform: capitalize;
+}
+
+#go-to:hover {
+  color: rgb(8, 8, 8);
+  cursor: pointer;
+}
+
+/* -----Filter button styling----*/
+
+.buttonContainer2 {
   display: flex;
   flex-direction: column;
- 
 }
 
-
-.buttonContainer2 #filterknap{
+.buttonContainer2 #filterknap {
   width: 100%;
   border-radius: 0px;
   padding: 16px 5px 16px 5px;
@@ -163,89 +191,101 @@ input[type="submit"]:focus {
   max-width: 1200px;
 }
 
-/* colors til de forsk. kursus sider*/
+/*--------------- colors til de forsk. kursus sider------------------*/
 
 /*online kurser*/
-.onk{
-  background-color: #FF4A69;
+
+.onk {
+  background-color: #ff4a69;
 }
 
-.overskrift-onk{
-  color: #FF4A69;
+.overskrift-onk {
+  color: #ff4a69;
 }
 
-.info-box-onk{
-  background-color:#ff7d92;
+.info-box-onk {
+  background-color: #ff7d92;
 }
 
 /* undervisere og ledere*/
-.uol{
+
+.uol {
   background-color: #3e66e9;
 }
 
-.overskrift_uol{
+.overskrift_uol {
   color: #3e66e9;
-
 }
 
-.info-box-uol{
-  background-color: #5b80f8
+.info-box-uol {
+  background-color: #5b80f8;
 }
+
 /*kommunen*/
-.k{
+
+.k {
   background-color: #292b5e;
 }
 
-.overskrift_k{
-  color: #2A2D6C;
+.overskrift_k {
+  color: #2a2d6c;
 }
 
-.info-box-k{
+.info-box-k {
   background-color: #657ad4;
 }
+
 /* grundskole*/
-.gs{
+
+.gs {
   background-color: #b26ac4;
 }
 
-.info-box-gs{
-  background-color:#e2c2e9;
+.info-box-gs {
+  background-color: #e2c2e9;
 }
 
-.overskrift_gs{
+.overskrift_gs {
   color: #c35add;
 }
 
 /* ungdsomsuddannelser*/
-	.uu{
-		background-color: #99cccd;
-	}
 
-	.overskrift_uu{
-    color: #75C0C7;
-}
-
-.info-box-uu{
+.uu {
   background-color: #99cccd;
 }
+
+.overskrift_uu {
+  color: #75c0c7;
+}
+
+.info-box-uu {
+  background-color: #99cccd;
+}
+
 /* efterskoler*/
-.overskrift_es{
-  color:#FF8434;
+
+.overskrift_es {
+  color: #ff8434;
 }
 
-.info-box-es{
-  background-color:#ff8d41;
+.info-box-es {
+  background-color: #ff8d41;
 }
+
 /*overskriften over loopview*/
-.overskrift-container{
+
+.overskrift-container {
   max-width: 1200px;
-  margin:0 auto;
+  margin: 0 auto;
 }
 
-#overskrift{
-  padding:1rem;
+#overskrift {
+  padding: 1rem;
 }
-/*----------kursus oversigt- loop view del----*/
+
+/*----------kursus oversigt- loop view del-------------------*/
+
 #oversigt {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -254,33 +294,31 @@ input[type="submit"]:focus {
   margin: auto;
   max-width: 1100px;
   margin-bottom: 2rem;
-
-}
-.kurset img {
-  height: 200px;
-  object-fit: cover;
-  object-position: 20% 30%;
 }
 
-.kurset{
+.kurset {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: baseline;
 }
 
-.kurset .navn{
+.kurset img {
+  height: 200px;
+  object-fit: cover;
+  object-position: 20% 30%;
+}
+
+.kurset .navn {
   font-size: 0.9rem;
   margin: 8px 0;
 }
-
-
 
 #oversigt div p.kortbeskrivelse {
   font-size: 0.68em;
 }
 
-h1:not(.site-title):before, h2:before{
+h1:not(.site-title):before, h2:before {
   display: none;
 }
 
@@ -288,378 +326,329 @@ h1:not(.site-title):before, h2:before{
   background: #75c0c7;
 }
 
-/*kursus oversigt info del*/
-.entry-footer{
-  display: none;
-}
+/*----------------------kursus oversigt info del-----------------------------*/
 
-.info-section h2{
+.info-section h2 {
   font-size: 37px;
 }
-.entry-content .info-section{
+
+.entry-content .info-section {
   box-sizing: border-box;
   max-width: 1300px;
   margin: 0 auto;
 }
 
-#go-to-top-container{
-  display: flex;
-  justify-content: end;
-  margin-bottom: 2rem;
-  margin-right: 100px;
-}
-#go-to{
-  color: rgb(94 165 187);
-  text-align: right;
- padding:10px;
-  font-size: 0.85rem
-}
 
-#go-to:hover{
-  color:rgb(8, 8, 8);
-  cursor: pointer;
-}
 
- div > section
-.gridbox{
+div>section .gridbox {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   row-gap: 8px;
   column-gap: 80px;
   margin-top: 1.5rem;
-  margin-left:1rem;
+  margin-left: 1rem;
   max-width: 1200px;
 }
 
-.overskrift1{
-  margin-top:1.5rem;
+.overskrift1 {
+  margin-top: 1.5rem;
 }
 
-.info-box{
-  display:flex;
+.info-box {
+  display: flex;
   flex-direction: column;
   align-content: space-between;
   padding: 10px 20px 15px 20px;
-  margin-top:1.5rem;
-  margin-bottom:1.5rem;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
   border-radius: 15px;
 }
 
 
-/*-- wp buttons ---*/
-.wp-block-buttons{
-  margin: 1rem;
-  justify-content: center;
-  display: flex;
-  justify-content: space-around;
-  flex-direction: row;
-}
 
-.wp-block-button__link{
-  font-family: 'georgiaregular', Georgia, 'Times New Roman', Times, serif;
-  font-size: 16px;
-  font-weight: 300;
-  line-height: 1.2;
-  letter-spacing:0.05em;
-}
 /*-------------SINGLEVIEW -----------------*/
-.container{
-  margin:0 auto;
-}  
+
+.container {
+  margin: 0 auto;
+}
 
 /*first section - info section*/
-#info-section{
-  max-width:1200px;
-  margin:0 auto;
+
+#info-section {
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .info-grid {
- display: grid; 
- grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
- padding: 0px 10px 0px 0px;
- row-gap: 8px;
- column-gap: 80px;
- max-width: 1200px;
- margin:0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+  padding: 0px 10px 0px 0px;
+  row-gap: 8px;
+  column-gap: 80px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .infoboks1 {
- margin-top:1rem;
-
+  margin-top: 1rem;
 }
 
 .infoboks2 {
- padding: 10px 20px 15px 20px;
- margin-bottom: 1.5rem;
- border-radius: 15px;
- background-color: #75c0c7;
- max-width:550px;
+  padding: 10px 20px 15px 20px;
+  margin-bottom: 1.5rem;
+  border-radius: 15px;
+  background-color: #75c0c7;
+  max-width: 550px;
 }
 
-.pris, .laengde , .antal_deltagere, .klassetrin {
- font-size: 0.9rem;
- font-weight:400;
+.pris, .laengde, .antal_deltagere, .klassetrin {
+  font-size: 0.9rem;
+  font-weight: 400;
 }
 
-.info-overskrift{
- text-align: center;
+.info-overskrift {
+  text-align: center;
 }
 
-.luk{
- padding:14px 0px 2px 0px;
+.luk {
+  padding: 14px 0px 2px 0px;
 }
 
-/*section section - picture and button*/
-.section2{
- margin: 0 auto;
- max-width: 1200px;
- grid-template-columns: 50% 50%;
- display: grid;
- justify-content: center;
+/*section 2 - picture and button*/
+
+.section2 {
+  margin: 0 auto;
+  max-width: 1200px;
+  grid-template-columns: 50% 50%;
+  display: grid;
+  justify-content: center;
 }
 
-.farveboks{
- display: flex;
- flex-direction: column;
- text-align: center;
- align-content: space-between;
- background-color: #C6EEEF;
- justify-content: center;
- align-self: center;
- padding: 2rem;
- width: 90vw;
- margin-left: calc(50% - 50vw);
- cursor:pointer;
+.farveboks {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  background-color: #c6eeef;
+  align-self: center;
+  padding: 2rem;
+  width: 90vw;
+  margin-left: calc(50% - 50vw);
+  cursor: pointer;
 }
 
-.imgboks{
- max-width: 550px;
- margin-left: 2vw;
+.imgboks {
+  max-width: 550px;
+  margin-left: 2vw;
 }
 
 /* third section - booking -*/
-.booking{
- padding-top:2.5rem;
- max-width:1200px;
-  margin:0 auto;
- 
+
+.booking {
+  padding-top: 2.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-.booking h4{
- text-align:center;
+.booking h4 {
+  text-align: center;
 }
-#formular{
- display: flex;
+
+#formular {
+  display: flex;
   flex-direction: column;
-  justify-content:center;
+  justify-content: center;
   align-items: center;
-  
 }
 
-.input-boks input{
- width:100%;
+.input-boks input {
+  width: 100%;
 }
 
-
-.input-boks{
- display:grid;
- grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
- row-gap: 8px;
- column-gap: 80px;
- width:100%;
- background-color: #e9fafb;
- border-radius:5px;
- padding: 30px 30px 10px 30px;
-
+.input-boks {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  row-gap: 8px;
+  column-gap: 80px;
+  width: 100%;
+  background-color: #e9fafb;
+  border-radius: 5px;
+  padding: 30px 30px 10px 30px;
 }
 
-#booknu{
- margin-top: 35px;
- font-size: 20px;
+#booknu {
+  margin-top: 35px;
+  font-size: 20px;
 }
 
-
-.spørgsmål{
- margin-top:2.3rem;
- text-align: center;
- background-color: #C6EEEF;
- justify-content: center;
- align-self: center;
- padding: 1.5rem;
- width:100%;
+.spoergsmål {
+  margin-top: 2.3rem;
+  text-align: center;
+  background-color: #c6eeef;
+  justify-content: center;
+  align-self: center;
+  padding: 1.5rem;
+  width: 100%;
 }
 
-.tekst{
- display: flex;
- flex-direction: column;
- align-items: center;
- justify-content: space-between;
+.tekst {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
 }
 
 /*pop up*/
+
 #popup {
-overflow-y: scroll;
-display: none;
-position: fixed;
-left: 0;
-top: 0;
-width: 100vw;
-height: 100vh;
-background-color: rgba(36, 42, 51, 0.90);
+  display: none;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(36, 42, 51, 0.9);
 }
 
 #popup article {
-width: 50vw;
-margin: 8rem auto;
-padding: 8px 25px 36px 35px;
-border-radius: 25px;
-background-color: white;
+  width: 50vw;
+  margin: 8rem auto;
+  padding: 8px 25px 36px 35px;
+  border-radius: 25px;
+  background-color: white;
 }
 
-#popup article h4{
- padding-top:1.5rem;
- color:#75c0c7;
+#popup article h4 {
+  padding-top: 1.5rem;
+  color: #75c0c7;
 }
 
-#popup article #luk{
-color:  #75c0c7;
-margin-top: 10px;
-cursor:pointer;
+#popup article #luk {
+  color: #75c0c7;
+  margin-top: 10px;
+  cursor: pointer;
 }
 
-#top-boks{
- display:flex;
- flex-direction:row;
- justify-content: space-between;
- 
+#top-boks {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
 /*------------mediaquery mobil-----------*/
-@media screen and (max-width:650px) {
 
+@media screen and (max-width: 650px) {
   /*general*/
   .entry .entry-content, .entry .entry-summary {
- max-width:730px;
+    max-width: 730px;
     margin: 0 15px;
-}
-
-  h1{
+  }
+  h1 {
     font-weight: 600;
-    font-size:1.6rem;
+    font-size: 1.6rem;
   }
-  h2{
-    font-size:1.3rem;
+  h2 {
+    font-size: 1.3rem;
   }
-  h3{
-    font-size:1.15rem;
+  h3 {
+    font-size: 1.15rem;
   }
-  h4{
+  h4 {
     font-weight: 500;
     font-size: 0.85rem;
   }
-  p, li, label, a{
-    font-size:0.7rem;
+  p, li, label, a {
+    font-size: 0.7rem;
   }
- 
   /*filter*/
   .filter_section2 {
-    grid-template-columns: repeat(auto-fill, minmax(100px, 180px ));
+    grid-template-columns: repeat(auto-fill, minmax(100px, 180px));
     row-gap: 10px;
     column-gap: 10px;
     padding: 0.1rem;
     margin: auto;
   }
-/*info section*/
-.info-section h2{
-  font-size:1.3rem;
-}
-  div > section
-  .gridbox{
-  margin:0 auto;;
+  /*info section*/
+  .info-section h2 {
+    font-size: 1.3rem;
   }
-.entry .entry-content .wp-block-image {
-  max-width: 90%;
-  margin: 0 auto;
-}
- /*loop view section*/
-#oversigt {
-  margin: 0 22px;
-}
-
-.kurset{
-  align-items: center;
-}
-
-/*---- SINGLE VIEW----*/
-#info-section{
-  margin: 10px 0;
-}
-.info-grid{
-  display: block;
-}
-
-.pris, .laengde, .antal_deltagere, .klassetrin {
-  font-size:0.7rem;
-}
-
-.section2{
-  display: block;
-}
-.farveboks{
-align-content: space-between;
- background-color: white;
- padding: 0;
-width: 100%;
-margin: 0;
-
-}
-
-.input-boks{
-  display: block;
-}
-br{
-  display:none;
-}
- input{
-   margin: 10px 0px;
- }
- #go-to-top-container{
-   display: block;
- }
-
- #popup article {
-  width: 90%;}
-
-}
-@media screen and (min-width:650px) and (max-width:1090px){
-  /* single*/
-  #info-section{
-    margin: 5px 30px;
-    max-width:900px;
-  }
-  .info-grid{
-    display: block;
-  }
-  
-  .pris, .laengde, .antal_deltagere, .klassetrin {
-    font-size:0.7rem;
-  }
-  
-  .infoboks2{
+  div>section .gridbox {
     margin: 0 auto;
   }
-  .section2{
+  .entry .entry-content .wp-block-image {
+    max-width: 90%;
+    margin: 0 auto;
+  }
+  /*loop view section*/
+  #oversigt {
+    margin: 0 22px;
+  }
+  .kurset {
+    align-items: center;
+  }
+  /*---- SINGLE VIEW----*/
+  #info-section {
+    margin: 10px 0;
+  }
+  .info-grid {
+    display: block;
+    padding: 0px 15px;
+  }
+  .pris, .laengde, .antal_deltagere, .klassetrin {
+    font-size: 0.7rem;
+  }
+  .section2 {
     display: block;
   }
-  .farveboks{
-  align-content: space-between;
-   background-color: white;
-   padding: 0;
-  width: 100%;
-  margin: 0;
+  .farveboks {
+    align-content: space-between;
+    background-color: white;
+    padding: 0;
+    width: 100%;
+    margin: 0;
   }
+  .input-boks {
+    display: block;
+  }
+  br {
+    display: none;
+  }
+  input {
+    margin: 10px 0px;
+  }
+  #go-to-top-container {
+    display: block;
+  }
+  #popup article {
+    width: 90%;
+  }
+}
 
-  .imgboks{
+@media screen and (min-width: 650px) and (max-width: 1090px) {
+  /* single*/
+  #info-section {
+    margin: 5px 30px;
+    max-width: 900px;
+  }
+  .info-grid {
+    display: block;
+  }
+  .pris, .laengde, .antal_deltagere, .klassetrin {
+    font-size: 0.7rem;
+  }
+  .infoboks2 {
+    margin: 0 auto;
+  }
+  .section2 {
+    display: block;
+  }
+  .farveboks {
+    align-content: space-between;
+    background-color: white;
+    padding: 0;
+    width: 100%;
+    margin: 0;
+  }
+  .imgboks {
     margin: 10px auto;
   }
   /*loop view*/

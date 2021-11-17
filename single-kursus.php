@@ -76,7 +76,7 @@ get_header();
             <div id="go-to-top-container">
                 <p id="go-to" class="go-top">Til toppen</p>
             </div>
-            <div class="spørgsmål">
+            <div class="spoergsmål">
                 <div class="tekst">
                     <h3>Har du nogle spørgsmål?</h3>
                     <p>Så skriv eller ring til os. Vi besvarer alle dine spørgsmål både om det enkelte forløb, booking,

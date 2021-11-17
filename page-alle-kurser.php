@@ -80,7 +80,7 @@ endwhile; // End the loop.
 
         </nav>
         <div class="overskrift-container">
-            <h2 id="overskrift">Alle kurser</h2>
+            <h2 id="overskrift">Alle tilbud og workshops</h2>
         </div>
         <section id="oversigt"></section>
 

@@ -61,7 +61,7 @@ endwhile; // End the loop.
         </nav>
 </section>
 <div class="overskrift-container">
-    <h3 id="overskrift" class="">Online kurser</h3>
+    <h3 id="overskrift" class="">Online tilbud</h3>
 </div>
 <section id="oversigt"></section>
 
@@ -93,7 +93,6 @@ let nyOverskrift = document.querySelector("#overskrift");
 
 //url til wp  db - læg mærke til den her kun indhenter data med kategori 5 (numreringen på online kategorien)
 const url = "https://xn--mflingo-q1a.dk/kea/ungdomsbyen/wp-json/wp/v2/kursus?categories=5";
-
 //const for destinationen af indholdet og templaten
 const destination = document.querySelector("#oversigt");
 let template = document.querySelector("template");
@@ -104,7 +103,6 @@ async function hentData() {
     kurser = await jsonData.json();
     visKurser();
 }
-
 // definerer filtrer knapper og sætter click eventlistener på Alle.
 const filterKnapper = document.querySelectorAll("#filterknap");
 filterKnapper.forEach(knap => knap.addEventListener("click", filtrerMenu));
@@ -125,12 +123,8 @@ function filtrerMenu() {
     visKurser();
 
     //scroller ned til indholdet efter tryk
-    document.querySelector(".overskrift-container").scrollIntoView({
-        behavior: 'smooth'
-    });
+    document.querySelector(".overskrift-container").scrollIntoView({behavior: 'smooth' });
 }
-
-
 // viser vores indhold indhentet fra wp db, ved at indsætte det i template klon, og append til dne definerede destination
 function visKurser() {
     console.log(kurser);
@@ -151,8 +145,6 @@ function visKurser() {
         }
     });
 }
-
-
 //click eventlistener og function der scroller fra "til toppen" knap i bunden - til toppen af siden.
 document.querySelector(".go-top").addEventListener("click", scrollUp);
 
@@ -162,9 +154,9 @@ function scrollUp() {
         behavior: 'smooth'
     });
 }
-
 //kald på hentData function
 hentData();
+
 </script>
 
 
